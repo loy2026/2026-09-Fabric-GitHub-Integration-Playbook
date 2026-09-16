@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rollback and restore · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="19 — Rollback and restore">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html" class="here"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part VI &middot; Operations and adoption</div><header class="pagehead"><div class="kicker">Part VI &middot; Operations and adoption</div><h1><span class="secnum">19</span>Rollback and restore</h1></header><article><p class="lead">The question that determines the method is not which command is cleaner. It is whether anyone else has pulled the commit. Get that wrong and a recovery becomes a second incident.</p>
+<p><a class="xref" href="#figure-9">Figure 9</a> sets out the decision, both procedures, and the Fabric re-sync that must follow either of them.</p>
+<figure class="diagram" id="figure-9"><button class="zoom" type="button" data-src="diagrams/d8_rollback_decision.svg" data-cap="Figure 9" title="Expand"><img src="diagrams/d8_rollback_decision.svg" alt="Figure 9. The decision, both procedures, and the Fabric re-sync that has to follow either of them." loading="lazy"></button><figcaption><span class="fignum">Figure 9.</span> The decision, both procedures, and the Fabric re-sync that has to follow either of them.</figcaption></figure>
+<h2 id="19-1-choosing-the-method"><span class="secnum">19.1</span>Choosing the method<a class="permalink" href="#19-1-choosing-the-method" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-38"><span class="tabnum">Table 38.</span> Rollback method selection</figcaption><div class="scroller"><table><colgroup><col style="width:36.9%"><col style="width:21.5%"><col style="width:41.5%"></colgroup><thead><tr><th scope="col">Situation</th><th scope="col">Method</th><th scope="col">Why</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>The commits are on a shared branch — <code>main</code>, or a feature branch a colleague has pulled.</span></th><td class="mono"><span><code>git revert</code></span></td><td><span>Non-destructive. Creates a new commit that inverts the change, preserving history. Safe for any branch other people use.</span></td></tr><tr><th scope="row" class="strongcell"><span>The commits are only on your machine, or on a private branch nobody else has pulled.</span></th><td class="mono"><span><code>git reset --hard</code></span></td><td><span>Rewrites history by moving the branch pointer. Faster and cleaner, and unsafe anywhere shared.</span></td></tr><tr><th scope="row" class="strongcell"><span>The change is in the workspace but has not been committed.</span></th><td class="mono"><span>Fabric <em>Undo</em></span></td><td><span>The source control pane can discard uncommitted workspace changes. Use this before reaching for Git at all.</span></td></tr><tr><th scope="row" class="strongcell"><span>The workspace has been emptied by a bad sync.</span></th><td class="mono"><span>See <a class="xref" href="07-connecting-a-workspace-safely.html#7-5-recovery-if-a-workspace-has-already-been-emptied">Section 7.5</a></span></td><td><span>This is a different problem — the branch is intact and the workspace is not.</span></td></tr></tbody></table></div></figure>
+<aside class="callout rule"><div class="co-label">Rule</div><div class="co-body"><p class="co-title">Never <code>reset --hard</code> a shared branch</p><p>Rewriting the history of a branch others have pulled leaves their local copies inconsistent with the remote. The next person to pull gets a confusing divergence, and someone will resolve it by force-pushing their own stale version back. If the commit has been shared, revert it.</p></div></aside>
+<h2 id="19-2-method-one-git-revert"><span class="secnum">19.2</span>Method one: <code>git revert</code><a class="permalink" href="#19-2-method-one-git-revert" aria-label="Link to this section">#</a></h2>
+<p>The safe method, and the one to use for anything that has reached <code>main</code>. <strong>Scenario:</strong> a merged change has introduced a defect and must be undone without disrupting anyone else&#x27;s history.</p>
+<h3 id="19-2-1-prepare-the-local-repository"><span class="secnum">19.2.1</span>Prepare the local repository<a class="permalink" href="#19-2-1-prepare-the-local-repository" aria-label="Link to this section">#</a></h3>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code><span class="cmt"># Switch to the branch that needs fixing</span>
+git checkout main
+
+<span class="cmt"># Bring it up to date with the remote</span>
+git pull origin main</code></pre></div></figure>
+<h3 id="19-2-2-identify-the-commit"><span class="secnum">19.2.2</span>Identify the commit<a class="permalink" href="#19-2-2-identify-the-commit" aria-label="Link to this section">#</a></h3>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code><span class="cmt"># Review the recent history</span>
+git log --oneline
+
+<span class="cmt"># Example output</span>
+7fea9b8 (HEAD -&gt; main, origin/main) Merge pull request #42 from feature/revenue_2026_03
+d7f3346 add currency conversion to revenue measure   &lt;-- the defect
+6e03612 create bronze sample load
+6ae7dfa update pipeline schedule
+827a332 add silver conformance notebook</code></pre></div><figcaption>Identify the hash of the commit to undo. Here it is d7f3346.</figcaption></figure>
+<h3 id="19-2-3-revert"><span class="secnum">19.2.3</span>Revert<a class="permalink" href="#19-2-3-revert" aria-label="Link to this section">#</a></h3>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code><span class="cmt"># Revert a single commit</span>
+git revert d7f3346</code></pre></div></figure>
+<p>Git opens your editor to confirm the commit message for the new revert commit. The default — <code>Revert &quot;add currency conversion to revenue measure&quot;</code> — is usually adequate; add the incident reference if there is one. Save and close to finalize.</p>
+<p>To revert a range, revert newest-first to avoid conflicts, or specify the range directly:</p>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code><span class="cmt"># Revert a range, oldest to newest. The caret includes the oldest commit.</span>
+git revert &lt;oldest_hash&gt;^..&lt;newest_hash&gt;
+
+<span class="cmt"># Reverting a merge commit requires the mainline parent</span>
+git revert -m 1 &lt;merge_commit_hash&gt;</code></pre></div><figcaption>Reverting a merge commit needs -m 1 to indicate which parent to treat as the mainline.</figcaption></figure>
+<h3 id="19-2-4-push"><span class="secnum">19.2.4</span>Push<a class="permalink" href="#19-2-4-push" aria-label="Link to this section">#</a></h3>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code>git push origin main</code></pre></div></figure>
+<p>The history on GitHub now contains a commit that explicitly undoes the problematic change, which is both a recovery and an audit record.</p>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title">A protected <code>main</code> will refuse this push</p><p>If the ruleset from <a class="xref" href="16-hardening-the-repository-with-rulesets.html">Section 16</a> is active, a direct push to <code>main</code> is rejected — correctly. Perform the revert on a branch and merge it through a pull request:</p><p class="co-gap"></p><p><code>git checkout -b hotfix/&lt;incident-id&gt;</code> → <code>git revert &lt;hash&gt;</code> → <code>git push origin hotfix/&lt;incident-id&gt;</code> → open a pull request.</p><p class="co-gap"></p><p>Under a genuine production incident, an administrator with bypass may push directly. Record why.</p></div></aside>
+<h2 id="19-3-method-two-git-reset-hard"><span class="secnum">19.3</span>Method two: <code>git reset --hard</code><a class="permalink" href="#19-3-method-two-git-reset-hard" aria-label="Link to this section">#</a></h2>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title">Destructive and history-rewriting</p><p>Use only on commits that have not been pushed to a shared branch, or after coordinating with everyone who has the branch. Work discarded by this command is not recoverable through normal means.</p></div></aside>
+<p><strong>Scenario:</strong> several commits on your own private feature branch are wrong and you want to return to a known good state.</p>
+<h3 id="19-3-1-identify-the-last-good-commit"><span class="secnum">19.3.1</span>Identify the last good commit<a class="permalink" href="#19-3-1-identify-the-last-good-commit" aria-label="Link to this section">#</a></h3>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code>git log --oneline
+
+<span class="cmt"># Example output on your own feature branch</span>
+9fceb02 (HEAD -&gt; feature/revenue_2026_03) add broken transform   &lt;-- discard
+3e1f1b2 add incomplete tests                                     &lt;-- discard
+f414f31 add base structure for new logic                         &lt;-- keep
+d8cd0ee previous feature work</code></pre></div><figcaption>Here the intention is to discard the top two commits and return to f414f31.</figcaption></figure>
+<h3 id="19-3-2-reset"><span class="secnum">19.3.2</span>Reset<a class="permalink" href="#19-3-2-reset" aria-label="Link to this section">#</a></h3>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code><span class="cmt"># Discards every commit and local change after f414f31</span>
+git reset --hard f414f31</code></pre></div></figure>
+<p>The local branch is now at that commit and the discarded commits are gone from its history.</p>
+<h3 id="19-3-3-force-push"><span class="secnum">19.3.3</span>Force-push<a class="permalink" href="#19-3-3-force-push" aria-label="Link to this section">#</a></h3>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code><span class="cmt"># --force-with-lease refuses if the remote has moved since you last fetched,</span>
+<span class="cmt"># which is a meaningful safeguard over a bare --force</span>
+git push origin feature/revenue_2026_03 --force-with-lease</code></pre></div><figcaption>Prefer --force-with-lease to --force. It protects against overwriting a colleague&#x27;s push you had not seen.</figcaption></figure>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">The feature branch ruleset will block this</p><p><a class="xref" href="16-hardening-the-repository-with-rulesets.html#16-6-a-feature-branch-ruleset">Section 16.6</a> recommends <em>Block force pushes</em> on <code>feature/**</code>. That is a deliberate trade: it prevents accidental history loss on a branch a colleague may have pulled, at the cost of this recovery path. If you need it, the cleaner route is usually to abandon the branch and create a new one from the last good commit.</p></div></aside>
+<h2 id="19-4-re-syncing-the-fabric-workspace"><span class="secnum">19.4</span>Re-syncing the Fabric workspace<a class="permalink" href="#19-4-re-syncing-the-fabric-workspace" aria-label="Link to this section">#</a></h2>
+<p>Rolling back the repository changes nothing in Fabric. The workspace must be updated from the restored branch.</p>
+<ol class="steps"><li>Open the Fabric workspace connected to the branch you rolled back.</li><li>Select the <em>Source control</em> icon.</li><li>Open <em>Updates</em>. Fabric compares the workspace with the remote branch, detects that the branch has moved, and lists the items that must change.</li><li>Review the list. Confirm it matches what you expect the rollback to affect — an unexpected entry means something else changed too.</li><li>Select <em>Update all</em>, and confirm. Fabric overwrites the workspace items to match the restored commit.</li><li>Verify the items run. Execute the affected pipelines, refresh the models, open the reports.</li><li>Repeat for each workspace connected to that branch and folder.</li></ol>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title">Git restores definitions, not data</p><p>If the bad change wrote incorrect data — a mis-specified merge, a truncation, a bad backfill — then restoring the code does not restore the data. Data recovery is a separate exercise requiring a separate capability. Establish what that capability is <strong>before</strong> you need it.</p></div></aside>
+<h2 id="19-5-incident-sequence-in-order"><span class="secnum">19.5</span>Incident sequence, in order<a class="permalink" href="#19-5-incident-sequence-in-order" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-39"><span class="tabnum">Table 39.</span> Rollback runbook</figcaption><div class="scroller"><table><colgroup><col style="width:6.9%"><col style="width:53.1%"><col style="width:40.0%"></colgroup><thead><tr><th scope="col">Step</th><th scope="col">Action</th><th scope="col">Notes</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>1</span></th><td><span>Stop the bleeding. Disable the schedule or trigger causing the damage.</span></td><td><span>Before diagnosis. A failing job running every fifteen minutes makes everything harder.</span></td></tr><tr><th scope="row" class="strongcell"><span>2</span></th><td><span>Determine the scope. Which items, which workspaces, which data.</span></td><td><span>Records and reports downstream of the change are in scope even if untouched.</span></td></tr><tr><th scope="row" class="strongcell"><span>3</span></th><td><span>Identify the commit and the pull request.</span></td><td><span>The pull request description should tell you the intended blast radius.</span></td></tr><tr><th scope="row" class="strongcell"><span>4</span></th><td><span>Choose the method per <a class="xref" href="#19-1-choosing-the-method">Section 19.1</a>.</span></td><td><span>Shared branch → revert.</span></td></tr><tr><th scope="row" class="strongcell"><span>5</span></th><td><span>Execute the rollback in the repository.</span></td><td><span>Through a pull request if <code>main</code> is protected.</span></td></tr><tr><th scope="row" class="strongcell"><span>6</span></th><td><span>Re-sync every affected Fabric workspace.</span></td><td><span><a class="xref" href="#19-4-re-syncing-the-fabric-workspace">Section 19.4</a>.</span></td></tr><tr><th scope="row" class="strongcell"><span>7</span></th><td><span>Verify. Run the pipelines, refresh the models, open the reports.</span></td><td><span>Verification is part of the rollback, not a follow-up.</span></td></tr><tr><th scope="row" class="strongcell"><span>8</span></th><td><span>Assess data damage separately.</span></td><td><span>Code rollback does not undo data changes.</span></td></tr><tr><th scope="row" class="strongcell"><span>9</span></th><td><span>Record what happened and why the gates did not catch it.</span></td><td><span>If the answer is &#x27;the reviewer could not have known&#x27;, that is a finding about the pull request template, not about the reviewer.</span></td></tr></tbody></table></div></figure></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="18-optional-automated-security-scanning.html"><span class="dir">&#8592; Previous</span><span class="ttl">18. Optional: automated security scanning</span></a>
+<a class="next" href="20-auditing-monitoring-and-scaling.html"><span class="dir">Next &#8594;</span><span class="ttl">20. Auditing, monitoring and scaling</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#19-1-choosing-the-method">19.1 Choosing the method</a></li>
+<li><a href="#19-2-method-one-git-revert">19.2 Method one: git revert</a></li>
+<li class="l3"><a href="#19-2-1-prepare-the-local-repository">19.2.1 Prepare the local repository</a></li>
+<li class="l3"><a href="#19-2-2-identify-the-commit">19.2.2 Identify the commit</a></li>
+<li class="l3"><a href="#19-2-3-revert">19.2.3 Revert</a></li>
+<li class="l3"><a href="#19-2-4-push">19.2.4 Push</a></li>
+<li><a href="#19-3-method-two-git-reset-hard">19.3 Method two: git reset --hard</a></li>
+<li class="l3"><a href="#19-3-1-identify-the-last-good-commit">19.3.1 Identify the last good commit</a></li>
+<li class="l3"><a href="#19-3-2-reset">19.3.2 Reset</a></li>
+<li class="l3"><a href="#19-3-3-force-push">19.3.3 Force-push</a></li>
+<li><a href="#19-4-re-syncing-the-fabric-workspace">19.4 Re-syncing the Fabric workspace</a></li>
+<li><a href="#19-5-incident-sequence-in-order">19.5 Incident sequence, in order</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

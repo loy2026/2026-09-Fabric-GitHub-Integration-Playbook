@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-connection runbook checklist · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="Appendix C — Pre-connection runbook checklist">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html" class="here"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part VII &middot; Appendices</div><header class="pagehead"><div class="kicker">Part VII &middot; Appendices</div><h1><span class="secnum">Appendix C</span>Pre-connection runbook checklist</h1></header><article><p>Print this, or paste it into the change ticket. Do not start step 8 until steps 1 to 7 are signed off.</p>
+<figure class="tablewrap" data-cols="4"><figcaption id="table-47"><span class="tabnum">Table 47.</span> Connection checklist</figcaption><div class="scroller"><table><colgroup><col style="width:4.6%"><col style="width:56.9%"><col style="width:17.7%"><col style="width:20.8%"></colgroup><thead><tr><th scope="col">✓</th><th scope="col">Step</th><th scope="col">Owner</th><th scope="col">Evidence</th></tr></thead><tbody><tr><td>&nbsp;</td><td><span><strong>PREFLIGHT</strong></span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>1. Tenant settings confirmed enabled (<a class="xref" href="04-prerequisites-and-tenant-configuration.html#4-2-fabric-tenant-settings">Section 4.2</a>).</span></td><td><span>Fabric admin</span></td><td><span>Screenshot or admin confirmation</span></td></tr><tr><td>&nbsp;</td><td><span>2. Capacity confirmed available, including headroom for branch workspaces.</span></td><td><span>Fabric admin</span></td><td><span>Capacity name and SKU</span></td></tr><tr><td>&nbsp;</td><td><span>3. GitHub repository created, and confirmed to contain <strong>no</strong> folders matching the intended Git folder name.</span></td><td><span>Repo admin</span></td><td><span>Repository browsed by a second person</span></td></tr><tr><td>&nbsp;</td><td><span>4. Fine-grained PAT issued to the person performing the connection, scoped to this repository, Contents: Read and write.</span></td><td><span>Developer</span></td><td><span>Token name and expiry recorded</span></td></tr><tr><td>&nbsp;</td><td><span>5. Workspace cloned to a rollback target via deployment pipeline.</span></td><td><span>Fabric admin</span></td><td><span>Target workspace name</span></td></tr><tr><td>&nbsp;</td><td><span>6. Clone data re-hydrated — lakehouse Files and Tables, warehouse objects.</span></td><td><span>Data engineer</span></td><td><span>Row counts compared</span></td></tr><tr><td>&nbsp;</td><td><span>7. Clone verified: pipelines run, models refresh, reports open.</span></td><td><span>Data engineer</span></td><td><span>Execution evidence</span></td></tr><tr><td>&nbsp;</td><td><span><strong>CONNECT</strong></span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>8. <em>Workspace settings → Git integration</em>, provider GitHub, signed in with the PAT.</span></td><td><span>Workspace admin</span></td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>9. Organization, repository, branch (<code>main</code>) and folder (layer code) entered.</span></td><td><span>Workspace admin</span></td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>10. Dialog summary read. <strong>It does not offer a direction choice.</strong> If it does — cancel.</span></td><td><span>Workspace admin</span></td><td><span>Summary confirmed</span></td></tr><tr><td>&nbsp;</td><td><span>11. <em>Connect and sync</em> completed.</span></td><td><span>Workspace admin</span></td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span><strong>BASELINE</strong></span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>12. All items committed with a baseline message.</span></td><td><span>Workspace admin</span></td><td><span>Commit hash</span></td></tr><tr><td>&nbsp;</td><td><span>13. Repository structure verified to mirror the workspace.</span></td><td><span>Second person</span></td><td><span>Repository browsed</span></td></tr><tr><td>&nbsp;</td><td><span>14. Steps 8–13 repeated for every layer workspace.</span></td><td><span>Workspace admin</span></td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span><strong>HARDEN</strong></span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>15. Teams created and repository roles assigned.</span></td><td><span>Repo admin</span></td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>16. <code>main</code> ruleset created and set to Active.</span></td><td><span>Repo admin</span></td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>17. Verification tests from <a class="xref" href="16-hardening-the-repository-with-rulesets.html#16-8-verifying-the-ruleset-works">Section 16.8</a> executed; every result matches the expected outcome.</span></td><td><span>Repo admin</span></td><td><span>Test output retained</span></td></tr><tr><td>&nbsp;</td><td><span>18. Secret scanning and push protection enabled.</span></td><td><span>Repo admin</span></td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span><strong>CLOSE</strong></span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>19. A full round trip completed: branch out, change, commit, pull request, merge, update.</span></td><td><span>Developer</span></td><td><span>Pull request number</span></td></tr><tr><td>&nbsp;</td><td><span>20. Preflight clones deleted, or a deletion date agreed.</span></td><td><span>Fabric admin</span></td><td>&nbsp;</td></tr></tbody></table></div></figure></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="appendix-b.html"><span class="dir">&#8592; Previous</span><span class="ttl">Appendix B — Consolidated limits reference</span></a>
+<a class="next" href="appendix-d.html"><span class="dir">Next &#8594;</span><span class="ttl">Appendix D — Roles and permissions quick reference</span></a>
+</nav></main>
+<aside class="rail" aria-hidden="true"></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

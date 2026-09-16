@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auditing, monitoring and scaling · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="20 — Auditing, monitoring and scaling">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html" class="here"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part VI &middot; Operations and adoption</div><header class="pagehead"><div class="kicker">Part VI &middot; Operations and adoption</div><h1><span class="secnum">20</span>Auditing, monitoring and scaling</h1></header><article><p class="lead">The framework produces evidence as a by-product. Whether that evidence is ever looked at is a separate decision, and it is the difference between a governed environment and one that merely looks governed.</p>
+<h2 id="20-1-what-each-platform-records"><span class="secnum">20.1</span>What each platform records<a class="permalink" href="#20-1-what-each-platform-records" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-40"><span class="tabnum">Table 40.</span> Available audit evidence</figcaption><div class="scroller"><table><colgroup><col style="width:23.1%"><col style="width:40.0%"><col style="width:36.9%"></colgroup><thead><tr><th scope="col">Source</th><th scope="col">Records</th><th scope="col">Review for</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>GitHub audit log</span></th><td><span>Repository setting changes, team membership changes, ruleset creation and modification, bypass events, secret creation, environment changes.</span></td><td><span>Ruleset weakening; bypass events; individuals added directly as collaborators; secrets added at repository scope.</span></td></tr><tr><th scope="row" class="strongcell"><span>GitHub pull request history</span></th><td><span>Every change, its author, its reviewers, its approvals, its checks, its discussion.</span></td><td><span>Changes merged without the expected approval; approvals dismissed then re-granted quickly; a pattern of self-approval.</span></td></tr><tr><th scope="row" class="strongcell"><span>Fabric activity log</span></th><td><span>Workspace and item operations, including Git integration actions and API calls by the service principal.</span></td><td><span>Commits and updates outside expected hours; connections established outside the documented procedure; service principal activity from unexpected sources.</span></td></tr><tr><th scope="row" class="strongcell"><span>Fabric monitoring hub</span></th><td><span>Pipeline and notebook execution history and outcomes.</span></td><td><span>Failures after a deployment; execution in workspaces that should be dormant.</span></td></tr><tr><th scope="row" class="strongcell"><span>Deployment pipeline history</span></th><td><span>What was promoted, by whom, when.</span></td><td><span>Promotions not traceable to a merged pull request.</span></td></tr></tbody></table></div></figure>
+<h2 id="20-2-a-review-cadence-that-is-actually-followed"><span class="secnum">20.2</span>A review cadence that is actually followed<a class="permalink" href="#20-2-a-review-cadence-that-is-actually-followed" aria-label="Link to this section">#</a></h2>
+<p>A comprehensive review nobody performs is worth less than a short one somebody does. The following is intended to be sustainable.</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-41"><span class="tabnum">Table 41.</span> Suggested review cadence</figcaption><div class="scroller"><table><colgroup><col style="width:16.9%"><col style="width:69.2%"><col style="width:13.8%"></colgroup><thead><tr><th scope="col">Frequency</th><th scope="col">Review</th><th scope="col">Time</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Weekly</span></th><td><span>Stale branches and branch workspaces. Anything whose date marker has passed and which has not merged.</span></td><td><span>10 minutes</span></td></tr><tr><th scope="row" class="strongcell"><span>Monthly</span></th><td><span>Bypass events in the audit log. Pull requests merged with fewer approvals than the ruleset requires. Any ruleset change.</span></td><td><span>30 minutes</span></td></tr><tr><th scope="row" class="strongcell"><span>Quarterly</span></th><td><span>Team membership against the identity provider. Repository collaborators — confirm every entry is still a team. Service principal API permissions and workspace roles. Personal access token expiries. The branch workspace admin profile&#x27;s consented identity.</span></td><td><span>2 hours</span></td></tr><tr><th scope="row" class="strongcell"><span>Quarterly</span></th><td><span>Re-run the ruleset verification tests from <a class="xref" href="16-hardening-the-repository-with-rulesets.html#16-8-verifying-the-ruleset-works">Section 16.8</a> and retain the evidence.</span></td><td><span>1 hour</span></td></tr><tr><th scope="row" class="strongcell"><span>Annually, or on change</span></th><td><span>This playbook, against current platform behaviour. Preview capabilities in particular.</span></td><td><span>1 day</span></td></tr></tbody></table></div></figure>
+<h2 id="20-3-scaling-beyond-one-project"><span class="secnum">20.3</span>Scaling beyond one project<a class="permalink" href="#20-3-scaling-beyond-one-project" aria-label="Link to this section">#</a></h2>
+<p>The pattern described here is per project. Applying it to a dozen projects by repeating the configuration twelve times guarantees twelve variations. Four mechanisms prevent that:</p>
+<ul class="lvl0"><li><strong>Organization-level rulesets.</strong> Define the <code>main</code> protection once at organization level and apply it to every repository matching a naming pattern. New repositories inherit the protection rather than needing it applied. Organization-level rulesets are available on GitHub Team and Enterprise plans; enterprise-level rulesets are Enterprise-only.</li><li><strong>Organization-level secrets</strong>, for the genuinely shared values only. Resist the temptation to centralize deployment credentials — see <a class="xref" href="17-environments-and-credential-management.html#17-1-the-three-secret-scopes">Section 17.1</a>.</li><li><strong>Reusable workflows.</strong> Define the deployment and verification workflows once in a shared repository and call them from each project, so a change to the deployment pattern is made in one place.</li><li><strong>A repository template.</strong> A template repository carrying the <code>CODEOWNERS</code> file, the pull request template, the workflow definitions and the documentation stub means every new project starts correctly configured rather than being corrected later.</li></ul>
+<aside class="callout tip"><div class="co-label">Practice</div><div class="co-body"><p class="co-title">The template is the highest-leverage item</p><p>Most drift between projects originates in the first hour of a repository&#x27;s life, when someone configures it from memory. A template removes that hour.</p></div></aside>
+<h2 id="20-4-advanced-testing"><span class="secnum">20.4</span>Advanced testing<a class="permalink" href="#20-4-advanced-testing" aria-label="Link to this section">#</a></h2>
+<p>Where the team is ready to go further than <a class="xref" href="18-optional-automated-security-scanning.html#18-4-continuous-integration-checks">Section 18.4</a>:</p>
+<ul class="lvl0"><li><strong>Unit-test notebook logic.</strong> Extract transformations into functions and test them with a standard framework. The constraint is usually notebook structure, not tooling — logic embedded in cells that assume a live lakehouse cannot be tested in isolation.</li><li><strong>Data quality expectations.</strong> Assert properties of a transformation&#x27;s output against a seeded dataset: row counts within bounds, no unexpected nulls in keys, referential integrity holding, totals reconciling.</li><li><strong>Semantic model validation.</strong> Check that measures return expected values for known inputs. Surprisingly effective at catching the class of change that is syntactically fine and numerically wrong.</li><li>Make these required status checks on the <code>main</code> ruleset once they are stable — and not before.</li></ul></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="19-rollback-and-restore.html"><span class="dir">&#8592; Previous</span><span class="ttl">19. Rollback and restore</span></a>
+<a class="next" href="21-implementation-roadmap.html"><span class="dir">Next &#8594;</span><span class="ttl">21. Implementation roadmap</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#20-1-what-each-platform-records">20.1 What each platform records</a></li>
+<li><a href="#20-2-a-review-cadence-that-is-actually-followed">20.2 A review cadence that is actually followed</a></li>
+<li><a href="#20-3-scaling-beyond-one-project">20.3 Scaling beyond one project</a></li>
+<li><a href="#20-4-advanced-testing">20.4 Advanced testing</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

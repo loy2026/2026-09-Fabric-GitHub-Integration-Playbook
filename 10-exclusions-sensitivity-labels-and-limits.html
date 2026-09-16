@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exclusions, sensitivity labels and limits · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="10 — Exclusions, sensitivity labels and limits">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html" class="here"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part III &middot; Scope of the integration</div><header class="pagehead"><div class="kicker">Part III &middot; Scope of the integration</div><h1><span class="secnum">10</span>Exclusions, sensitivity labels and limits</h1></header><article><p class="lead">What the integration does not cover is as much a design input as what it does. An unsupported item is protected by none of the controls in this playbook, and its absence from the repository is silent.</p>
+<h2 id="10-1-unsupported-items-and-exclusions"><span class="secnum">10.1</span>Unsupported items and exclusions<a class="permalink" href="#10-1-unsupported-items-and-exclusions" aria-label="Link to this section">#</a></h2>
+<p>The following are not part of the repository synchronization. Some are item types; others are categories of configuration that live only in the Fabric service.</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-20"><span class="tabnum">Table 20.</span> Not covered by Git integration</figcaption><div class="scroller"><table><colgroup><col style="width:29.2%"><col style="width:32.3%"><col style="width:38.5%"></colgroup><thead><tr><th scope="col">Excluded</th><th scope="col">Consequence</th><th scope="col">What to do instead</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Power BI dashboards</span></th><td><span>Not versioned; changes are unrecoverable through Git.</span></td><td><span>Prefer reports, which are supported. Where a dashboard is required, document its definition outside Fabric.</span></td></tr><tr><th scope="row" class="strongcell"><span>SQL analytics endpoint of a lakehouse</span></th><td><span>The lakehouse item is tracked; its endpoint is not.</span></td><td><span>Nothing to do — the endpoint is derived from the lakehouse.</span></td></tr><tr><th scope="row" class="strongcell"><span>Semantic models: push datasets, live connections to Azure Analysis Services or SQL Server Analysis Services, model v1, streaming datasets</span></th><td><span>These model types cannot be versioned.</span></td><td><span>Migrate to a supported model type where the workload allows it.</span></td></tr><tr><th scope="row" class="strongcell"><span>Reports depending on models in Analysis Services, or exported from Power BI Desktop against a model in My workspace</span></th><td><span>Excluded from report support.</span></td><td><span>Re-point the report at a workspace-hosted semantic model.</span></td></tr><tr><th scope="row" class="strongcell"><span>Workspace access roles</span></th><td><span>Who can do what in a workspace is not in the repository.</span></td><td><span>Manage in the Fabric service, sourced from identity provider groups (<a class="xref" href="15-access-model-teams-roles-and-identity.html#15-4-centralized-identity-with-microsoft-entra-id">Section 15.4</a>).</span></td></tr><tr><th scope="row" class="strongcell"><span>Deployment pipeline definitions</span></th><td><span>The release path itself is not versioned.</span></td><td><span>Document stage configuration and deployment rules in the companion release-management document.</span></td></tr><tr><th scope="row" class="strongcell"><span>Capacity assignment</span></th><td><span>Not in the repository.</span></td><td><span>Manage as platform configuration.</span></td></tr><tr><th scope="row" class="strongcell"><span>All lakehouse and warehouse data</span></th><td><span>Definitions are versioned; rows, files and tables are not.</span></td><td><span>Data protection is a separate discipline. Git integration is not a backup.</span></td></tr><tr><th scope="row" class="strongcell"><span>Items with sensitivity labels</span></th><td><span>Export may be disabled, so these items cannot be committed.</span></td><td><span>An administrator can enable export of labelled items. Decide this deliberately — it is a data-protection decision, not a tooling one.</span></td></tr><tr><th scope="row" class="strongcell"><span>Git submodules</span></th><td><span>Not supported.</span></td><td><span>Restructure to avoid them.</span></td></tr><tr><th scope="row" class="strongcell"><span>Workspaces with template apps installed</span></th><td><span>Cannot be connected to Git at all.</span></td><td><span>Separate template app content into its own workspace.</span></td></tr><tr><th scope="row" class="strongcell"><span>My workspace</span></th><td><span>Cannot connect to a Git provider.</span></td><td><span>Develop in a proper workspace, never in My workspace.</span></td></tr><tr><th scope="row" class="strongcell"><span>Sovereign clouds</span></th><td><span>Not supported.</span></td><td><span>—</span></td></tr><tr><th scope="row" class="strongcell"><span>B2B guest scenarios</span></th><td><span>Not supported for sync and commit.</span></td><td><span>Provision internal accounts for contributors who need to commit.</span></td></tr></tbody></table></div></figure>
+<h2 id="10-2-sensitivity-labels-and-data-protection"><span class="secnum">10.2</span>Sensitivity labels and data protection<a class="permalink" href="#10-2-sensitivity-labels-and-data-protection" aria-label="Link to this section">#</a></h2>
+<p>Items carrying sensitivity labels are not supported by default, and their export may be disabled — which means they cannot be committed. An administrator can enable the tenant setting that permits export of labelled items to Git repositories, with the label removed.</p>
+<p>This is a data-protection decision rather than a tooling one, and it should be made by whoever owns information protection, not by whoever is configuring source control. The question to answer is whether the repository is an appropriate location for the content the label was applied to protect. The repository typically has a different access list from the workspace, is readable by everyone with repository Read, and retains history indefinitely.</p>
+<aside class="callout local"><div class="co-label">Localize</div><div class="co-body"><p class="co-title">Decide this explicitly, and record who decided</p><p>Either labelled items are excluded from source control — accepting that they are unversioned — or export is enabled and the repository is brought within the scope of the relevant data-protection controls. Both are defensible. Leaving it undecided means the behaviour is determined by a tenant default.</p></div></aside>
+<aside class="callout rule"><div class="co-label">Rule</div><div class="co-body"><p class="co-title">Git integration is not a backup</p><p>It versions definitions. It does not version data. A workspace restored entirely from Git is a functional shell with no rows in it. Data protection requires its own strategy, and that strategy is out of scope here — but its absence is not.</p></div></aside>
+<h2 id="10-3-behaviour-when-unsupported-items-are-present"><span class="secnum">10.3</span>Behaviour when unsupported items are present<a class="permalink" href="#10-3-behaviour-when-unsupported-items-are-present" aria-label="Link to this section">#</a></h2>
+<p>A workspace or Git directory containing unsupported items can still be connected. The unsupported items are ignored: not saved, not synchronized, and not deleted. They appear in the source control pane with the <em>Unsupported</em> status and cannot be committed or updated. This is benign, but it means the repository is not a complete description of the workspace, and anyone reasoning about completeness needs to know that.</p>
+<h2 id="10-4-general-limitations-worth-knowing-before-you-design"><span class="secnum">10.4</span>General limitations worth knowing before you design<a class="permalink" href="#10-4-general-limitations-worth-knowing-before-you-design" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="2"><figcaption id="table-21"><span class="tabnum">Table 21.</span> General limitations</figcaption><div class="scroller"><table><colgroup><col style="width:27.7%"><col style="width:72.3%"></colgroup><thead><tr><th scope="col">Limitation</th><th scope="col">Detail</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Authentication strength</span></th><td><span>The Fabric authentication method must be at least as strong as the Git provider&#x27;s. If GitHub requires MFA, Fabric must too.</span></td></tr><tr><th scope="row" class="strongcell"><span>Duplicate names</span></th><td><span>Not allowed. Even where Power BI permits a duplicate name, update, commit and undo will fail.</span></td></tr><tr><th scope="row" class="strongcell"><span>Conflict resolution</span></th><td><span>Only partly performed in Fabric; some resolution happens in Git.</span></td></tr><tr><th scope="row" class="strongcell"><span>Files inside item folders</span></th><td><span>During commit, the service deletes files inside an item folder that are not part of the item definition. Files outside item folders are untouched.</span></td></tr><tr><th scope="row" class="strongcell"><span><code>.pbix</code> download after Git deployment</span></th><td><span>Downloading a report or dataset as <code>.pbix</code> from the service after deploying via Git integration is unreliable and not recommended. Use Power BI Desktop.</span></td></tr><tr><th scope="row" class="strongcell"><span>Workspace identity</span></th><td><span>An item committed while using a workspace identity can only be updated into a workspace connected to the same identity. This constrains branch-out.</span></td></tr><tr><th scope="row" class="strongcell"><span>Commit size — GitHub</span></th><td><span>The total combined size of files committed at once is limited to <strong>50 MB</strong>. A baseline commit that selects every item in a large workspace can exceed this; split it into several commits by folder or item type.</span></td></tr><tr><th scope="row" class="strongcell"><span>Commit size — Azure DevOps</span></th><td><span>25 MB using the Azure DevOps connector with a service principal; 125 MB using the default single sign-on Entra ID account with a user principal.</span></td></tr><tr><th scope="row" class="strongcell"><span>Individual file size</span></th><td><span>25 MB, regardless of provider.</span></td></tr></tbody></table></div></figure></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="09-supported-items-and-their-representation-in-git.html"><span class="dir">&#8592; Previous</span><span class="ttl">9. Supported items and their representation in Git</span></a>
+<a class="next" href="11-the-branching-model.html"><span class="dir">Next &#8594;</span><span class="ttl">11. The branching model</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#10-1-unsupported-items-and-exclusions">10.1 Unsupported items and exclusions</a></li>
+<li><a href="#10-2-sensitivity-labels-and-data-protection">10.2 Sensitivity labels and data protection</a></li>
+<li><a href="#10-3-behaviour-when-unsupported-items-are-present">10.3 Behaviour when unsupported items are present</a></li>
+<li><a href="#10-4-general-limitations-worth-knowing-before-you-design">10.4 General limitations worth knowing before you design</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

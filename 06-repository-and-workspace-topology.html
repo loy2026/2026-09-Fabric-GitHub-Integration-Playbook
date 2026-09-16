@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repository and workspace topology · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="6 — Repository and workspace topology">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html" class="here"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part II &middot; Establishing the integration</div><header class="pagehead"><div class="kicker">Part II &middot; Establishing the integration</div><h1><span class="secnum">6</span>Repository and workspace topology</h1></header><article><p class="lead">Naming and structure decisions are cheap to make and expensive to change, because the workspace name, the Git folder name and the branch name are all part of the connection. Settle them before the first workspace is connected.</p>
+<p><a class="xref" href="#figure-3">Figure 3</a> shows the three-way relationship between a workspace, the Git folder it is connected to, and the branch that folder sits on.</p>
+<figure class="diagram" id="figure-3"><button class="zoom" type="button" data-src="diagrams/d2_topology_mapping.svg" data-cap="Figure 3" title="Expand"><img src="diagrams/d2_topology_mapping.svg" alt="Figure 3. The three-way mapping. A workspace connects to exactly one branch and one folder. The folder tree inside that folder mirrors the workspace, and is identical across every branch. The medallion layers shown are an illustrative example, not a requirement." loading="lazy"></button><figcaption><span class="fignum">Figure 3.</span> The three-way mapping. A workspace connects to exactly one branch and one folder. The folder tree inside that folder mirrors the workspace, and is identical across every branch. The medallion layers shown are an illustrative example, not a requirement.</figcaption></figure>
+<h2 id="6-1-the-mirrored-structure"><span class="secnum">6.1</span>The mirrored structure<a class="permalink" href="#6-1-the-mirrored-structure" aria-label="Link to this section">#</a></h2>
+<p>When a workspace is connected and synchronized, its structure — including subfolders — is reproduced inside the connected Git folder. Items in workspace folders are exported to folders of the same name; items in Git folders are imported to folders of the same name. Each item occupies its own folder containing a <code>.platform</code> file and the definition files for that item type.</p>
+<p>Behaviour worth knowing before designing a structure:</p>
+<ul class="lvl0"><li>Empty folders are not copied to Git. A folder appears in Git when an item is created in it or moved into it.</li><li>Empty folders in Git are deleted automatically.</li><li>Empty folders in the workspace are <strong>not</strong> deleted automatically, even after every item has been moved out.</li><li>Folder structure is preserved to ten levels of depth.</li><li>An item whose display name exceeds 256 characters, ends with a period or space, or contains a forbidden character has its Git folder renamed to the item&#x27;s logical ID and type — which makes the repository considerably harder to read.</li></ul>
+<h2 id="6-2-naming-standards"><span class="secnum">6.2</span>Naming standards<a class="permalink" href="#6-2-naming-standards" aria-label="Link to this section">#</a></h2>
+<p>The following conventions are offered as a working default. The specific strings matter less than choosing one scheme and applying it without exception.</p>
+<figure class="tablewrap" data-cols="4"><figcaption id="table-11"><span class="tabnum">Table 11.</span> Recommended naming conventions</figcaption><div class="scroller"><table><colgroup><col style="width:15.3%"><col style="width:26.0%"><col style="width:26.0%"><col style="width:32.7%"></colgroup><thead><tr><th scope="col">Object</th><th scope="col">Pattern</th><th scope="col">Example</th><th scope="col">Notes</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Workspace</span></th><td class="mono"><span><code>&lt;ORG&gt;-FAB-&lt;PROJ&gt;-&lt;LAYER&gt;-&lt;STAGE&gt;</code></span></td><td class="mono"><span><code>ACME-FAB-FIN-BRZ-DEV</code></span></td><td><span>Sorts predictably in the workspace list. Layer and stage are both explicit, so no workspace is ambiguous.</span></td></tr><tr><th scope="row" class="strongcell"><span>Branch workspace</span></th><td class="mono"><span><code>&lt;ORG&gt;-FAB-&lt;PROJ&gt;-FEAT-&lt;nn&gt;</code></span></td><td class="mono"><span><code>ACME-FAB-FIN-FEAT-03</code></span></td><td><span>Numbered rather than named after a person, so the workspace outlives an individual&#x27;s involvement.</span></td></tr><tr><th scope="row" class="strongcell"><span>Repository</span></th><td class="mono"><span><code>&lt;proj&gt;-fabric</code></span></td><td class="mono"><span><code>fin-fabric</code></span></td><td><span>Lower case, hyphenated, within the <code>&lt;org&gt;</code> GitHub organization.</span></td></tr><tr><th scope="row" class="strongcell"><span>Git folder</span></th><td class="mono"><span><code>/&lt;LAYER&gt;</code></span></td><td class="mono"><span><code>/BRZ</code></span></td><td><span>One folder per layer workspace, at the root of the repository. Identical in every branch.</span></td></tr><tr><th scope="row" class="strongcell"><span>Feature branch</span></th><td class="mono"><span><code>feature/&lt;topic&gt;_&lt;YYYY_MM&gt;</code></span></td><td class="mono"><span><code>feature/income_statement_2026_03</code></span></td><td><span>Purpose is legible; snake_case is tooling-friendly; the date marks the target period.</span></td></tr><tr><th scope="row" class="strongcell"><span>Bug fix branch</span></th><td class="mono"><span><code>bugfix/&lt;topic&gt;</code></span></td><td class="mono"><span><code>bugfix/sales_report_filter</code></span></td><td><span>For corrective work that is not an emergency.</span></td></tr><tr><th scope="row" class="strongcell"><span>Hotfix branch</span></th><td class="mono"><span><code>hotfix/&lt;incident-id&gt;</code></span></td><td class="mono"><span><code>hotfix/INC-10482</code></span></td><td><span>Ties the branch to the incident record. Reserved for emergency production fixes.</span></td></tr><tr><th scope="row" class="strongcell"><span>Variable Library</span></th><td class="mono"><span><code>&lt;PROJ&gt;_config</code></span></td><td class="mono"><span><code>FIN_config</code></span></td><td><span>One per workspace that needs environment-specific values.</span></td></tr></tbody></table></div></figure>
+<aside class="callout tip"><div class="co-label">Practice</div><div class="co-body"><p class="co-title">Why a date marker in the branch name earns its place</p><p><code>feature/income_statement_2026_03</code> answers three questions at a glance: what the work is, when it was targeted, and whether it is stale. A branch list is one of the few places where redundant information is worth the characters.</p></div></aside>
+<h2 id="6-3-repository-granularity-the-decision-to-make-deliberately"><span class="secnum">6.3</span>Repository granularity: the decision to make deliberately<a class="permalink" href="#6-3-repository-granularity-the-decision-to-make-deliberately" aria-label="Link to this section">#</a></h2>
+<p>The recommendation here is <strong>one repository per project</strong>, with one folder per layer workspace. Three alternatives are defensible, and the choice depends on how independently the domains in your estate release.</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-12"><span class="tabnum">Table 12.</span> Repository granularity trade-offs</figcaption><div class="scroller"><table><colgroup><col style="width:26.2%"><col style="width:38.5%"><col style="width:35.4%"></colgroup><thead><tr><th scope="col">Model</th><th scope="col">Works well when</th><th scope="col">Costs</th></tr></thead><tbody><tr><td><span><strong>One repository per project</strong> <em>(recommended)</em></span></td><td><span>Layers within a project release together and are owned by one team. The whole project can be reviewed, branched and reverted as a unit.</span></td><td><span>Cross-project changes require coordinated pull requests in more than one repository.</span></td></tr><tr><td><span><strong>One repository for the estate</strong></span></td><td><span>A single team owns everything and governance is best applied once, centrally.</span></td><td><span>Release cadences become coupled. A pull request touches unrelated domains. The 1,000-item workspace limit and the review burden both arrive sooner.</span></td></tr><tr><td><span><strong>One repository per workspace</strong></span></td><td><span>Layers are owned by genuinely separate teams with independent release schedules.</span></td><td><span>A change spanning bronze and silver becomes two pull requests with no atomic merge. Reverting a cross-layer change is manual. Governance must be replicated per repository.</span></td></tr><tr><td><span><strong>One repository per project, one branch per layer</strong></span></td><td><span>Rarely the right answer.</span></td><td><span>Breaks GitHub Flow, makes <code>main</code> meaningless as a deployable trunk, and prevents a single pull request from describing a complete change. Not recommended.</span></td></tr></tbody></table></div></figure>
+<aside class="callout local"><div class="co-label">Localize</div><div class="co-body"><p class="co-title">Record the granularity decision and its rationale</p><p>This is the decision most likely to be revisited a year in, at which point the rationale has been forgotten. Write it down in <a class="xref" href="appendix-g.html">Appendix G</a>, including what would have to change for the decision to be revisited.</p></div></aside>
+<h2 id="6-4-structural-limits-that-constrain-the-design"><span class="secnum">6.4</span>Structural limits that constrain the design<a class="permalink" href="#6-4-structural-limits-that-constrain-the-design" aria-label="Link to this section">#</a></h2>
+<p>These limits are not edge cases; large Fabric estates reach them. Design within them rather than discovering them during a migration.</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-13"><span class="tabnum">Table 13.</span> Structural limits</figcaption><div class="scroller"><table><colgroup><col style="width:23.1%"><col style="width:24.6%"><col style="width:52.3%"></colgroup><thead><tr><th scope="col">Limit</th><th scope="col">Value</th><th scope="col">Design implication</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Items per workspace</span></th><td><span>1,000 Fabric and Power BI items</span></td><td><span>If a branch holds more than 1,000 items, syncing it to a workspace fails. Split the estate into smaller workspaces on separate branches, or organize into folders within one branch.</span></td></tr><tr><th scope="row" class="strongcell"><span>Folder depth</span></th><td><span>10 levels</span></td><td><span>Keep the layer folder shallow. Deep nesting also pushes against the path length limit.</span></td></tr><tr><th scope="row" class="strongcell"><span>Full file path</span></th><td><span>250 characters</span></td><td><span>Long item names plus deep folders exceed this and the file fails. Keep item display names concise.</span></td></tr><tr><th scope="row" class="strongcell"><span>Individual file size</span></th><td><span>25 MB</span></td><td><span>A large semantic model or a notebook with embedded content can breach this. <a class="xref" href="16-hardening-the-repository-with-rulesets.html#16-5-fabric-specific-rules-worth-enabling">Section 16.5</a> shows how to enforce it in the repository so the failure surfaces at commit rather than at sync.</span></td></tr><tr><th scope="row" class="strongcell"><span>Branch name length</span></th><td><span>244 characters</span></td><td><span>Not a practical constraint under the naming convention above.</span></td></tr><tr><th scope="row" class="strongcell"><span>Item display name</span></th><td><span>256 characters, no trailing period or space, no forbidden characters</span></td><td><span>Violations cause the Git folder to be renamed to a GUID, which makes the repository unreadable.</span></td></tr><tr><th scope="row" class="strongcell"><span>Directory name</span></th><td><span>Cannot begin or end with a space or tab; cannot contain <code>&quot; / : &lt; &gt; \ * ? |</code></span></td><td><span>Applies to the connected directory. Item folders have the same restriction minus the forward slash.</span></td></tr></tbody></table></div></figure></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="05-authentication-and-identity.html"><span class="dir">&#8592; Previous</span><span class="ttl">5. Authentication and identity</span></a>
+<a class="next" href="07-connecting-a-workspace-safely.html"><span class="dir">Next &#8594;</span><span class="ttl">7. Connecting a workspace safely</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#6-1-the-mirrored-structure">6.1 The mirrored structure</a></li>
+<li><a href="#6-2-naming-standards">6.2 Naming standards</a></li>
+<li><a href="#6-3-repository-granularity-the-decision-to-make-deliberately">6.3 Repository granularity: the decision to make deliberately</a></li>
+<li><a href="#6-4-structural-limits-that-constrain-the-design">6.4 Structural limits that constrain the design</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

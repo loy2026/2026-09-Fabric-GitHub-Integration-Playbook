@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supported items and their representation in Git · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="9 — Supported items and their representation in Git">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html" class="here"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part III &middot; Scope of the integration</div><header class="pagehead"><div class="kicker">Part III &middot; Scope of the integration</div><h1><span class="secnum">9</span>Supported items and their representation in Git</h1></header><article><p class="lead">Knowing what the integration covers is a planning input, not a detail. An unsupported item is not protected by any of the controls in this playbook, and its absence from the repository is silent — it simply never appears.</p>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title">Verify this inventory before relying on it</p><p>Fabric&#x27;s supported-item list changes frequently and many entries are in preview. The inventory below was accurate when this document was written. Check the current vendor documentation before making a design decision that depends on an item type being supported — particularly for a preview item.</p></div></aside>
+<h2 id="9-1-how-items-are-represented-in-git"><span class="secnum">9.1</span>How items are represented in Git<a class="permalink" href="#9-1-how-items-are-represented-in-git" aria-label="Link to this section">#</a></h2>
+<p>Supported items are written out as human-readable text, which is what makes review and diffing possible. Each item occupies a folder containing a <code>.platform</code> file plus its definition files.</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-18"><span class="tabnum">Table 18.</span> Representation of commonly used items</figcaption><div class="scroller"><table><colgroup><col style="width:20.0%"><col style="width:55.4%"><col style="width:24.6%"></colgroup><thead><tr><th scope="col">Item</th><th scope="col">Representation in the repository</th><th scope="col">Reviewable?</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Report</span></th><td><span>A folder containing a <code>.pbir</code> definition and <code>report.json</code>, describing layout, visuals and configuration.</span></td><td><span>Yes, though large visual changes produce noisy diffs.</span></td></tr><tr><th scope="row" class="strongcell"><span>Paginated report</span></th><td><span>A single <code>.rdl</code> file — an XML representation of the report definition.</span></td><td><span>Yes.</span></td></tr><tr><th scope="row" class="strongcell"><span>Semantic model</span></th><td><span>A folder containing <code>definition.pbidataset</code> and <code>model.bim</code>. The <code>.bim</code> is a JSON representation of the Tabular Object Model.</span></td><td><span>Yes. Expect column-order noise (<a class="xref" href="08-the-synchronization-model.html#8-6-diffs-that-are-not-really-changes">Section 8.6</a>).</span></td></tr><tr><th scope="row" class="strongcell"><span>Notebook</span></th><td><span>A folder containing a <code>.py</code> file plus metadata preserving markdown cells and the attached lakehouse and environment configuration. <strong>Cell outputs are not saved.</strong></span></td><td><span>Yes — notebooks diff well, which makes them the easiest item type to review.</span></td></tr><tr><th scope="row" class="strongcell"><span>Lakehouse</span></th><td><span>A placeholder recording the item&#x27;s existence and name. <strong>The data in OneLake is not version-controlled.</strong></span></td><td><span>No meaningful content to review.</span></td></tr><tr><th scope="row" class="strongcell"><span>Spark job definition</span></th><td><span>Definition and configuration saved as source files.</span></td><td><span>Yes.</span></td></tr><tr><th scope="row" class="strongcell"><span>Environment</span></th><td><span>Configuration including library specifications and Spark compute settings, as text.</span></td><td><span>Yes — and valuable, because environment drift is otherwise invisible.</span></td></tr><tr><th scope="row" class="strongcell"><span>Warehouse</span></th><td><span>The full schema — tables, views, stored procedures — as a SQL database project: a set of <code>.sql</code> files organized into folders.</span></td><td><span>Yes. This is the standard format for database source control.</span></td></tr><tr><th scope="row" class="strongcell"><span>Mirrored database</span></th><td><span>Configuration and definition as a <code>.json</code> file.</span></td><td><span>Yes, for settings changes.</span></td></tr><tr><th scope="row" class="strongcell"><span>Data pipeline</span></th><td><span>The pipeline definition — activities, parameters, structure — as a <code>.json</code> file.</span></td><td><span>Yes, with practice. Nested activity JSON is verbose.</span></td></tr><tr><th scope="row" class="strongcell"><span>Variable Library</span></th><td><span>Variables and value sets as JSON, deployable like any other item.</span></td><td><span>Yes — and this is where environment configuration becomes reviewable.</span></td></tr></tbody></table></div></figure>
+<h2 id="9-2-supported-item-inventory"><span class="secnum">9.2</span>Supported item inventory<a class="permalink" href="#9-2-supported-item-inventory" aria-label="Link to this section">#</a></h2>
+<p>The following item types supported Git integration at the time of writing. Entries marked <em>(preview)</em> were in preview.</p>
+<figure class="tablewrap" data-cols="2"><figcaption id="table-19"><span class="tabnum">Table 19.</span> Supported items by workload</figcaption><div class="scroller"><table><colgroup><col style="width:24.6%"><col style="width:75.4%"></colgroup><thead><tr><th scope="col">Workload</th><th scope="col">Items</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Data Engineering</span></th><td><span>Environment · GraphQL · Lakehouse · Notebooks · Spark Job Definitions · User Data Functions</span></td></tr><tr><th scope="row" class="strongcell"><span>Data Science</span></th><td><span>Machine learning experiments <em>(preview)</em> · Machine learning models <em>(preview)</em> · Data Agents</span></td></tr><tr><th scope="row" class="strongcell"><span>Data Factory</span></th><td><span>Copy Job · Dataflow Gen2 · Pipeline · Mirrored database · Mount ADF · Mirrored Snowflake <em>(preview)</em> · Airflow <em>(preview)</em> · dbt Job <em>(preview)</em> · Operations Agent <em>(preview)</em></span></td></tr><tr><th scope="row" class="strongcell"><span>Real-Time Intelligence</span></th><td><span>Activator · Eventhouse · Eventstream · KQL database · KQL queryset · Real-Time Dashboard · Maps · Event Schema Set <em>(preview)</em> · Digital twin builder <em>(preview)</em> · Anomaly detection <em>(preview)</em></span></td></tr><tr><th scope="row" class="strongcell"><span>Data Warehouse</span></th><td><span>Warehouse · Mirrored Azure Databricks Catalog</span></td></tr><tr><th scope="row" class="strongcell"><span>Power BI</span></th><td><span>Metrics Set <em>(preview)</em> · Org app <em>(preview)</em> · Paginated report <em>(preview)</em> · Report <em>(preview)</em> · Semantic model <em>(preview)</em></span></td></tr><tr><th scope="row" class="strongcell"><span>Database</span></th><td><span>SQL database · Cosmos database <em>(preview)</em></span></td></tr><tr><th scope="row" class="strongcell"><span>Graph</span></th><td><span>Graph Model · Graph QuerySet</span></td></tr><tr><th scope="row" class="strongcell"><span>CI/CD</span></th><td><span>Variable Library</span></td></tr><tr><th scope="row" class="strongcell"><span>IQ</span></th><td><span>Ontology <em>(preview)</em> · Plan <em>(preview)</em></span></td></tr><tr><th scope="row" class="strongcell"><span>Industry solutions</span></th><td><span>Healthcare <em>(preview)</em> · Healthcare Cohort <em>(preview)</em></span></td></tr></tbody></table></div></figure>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">Real-Time Intelligence is now supported</p><p>Earlier guidance — including earlier versions of this playbook — listed Eventstream, KQL databases, KQL querysets and Real-Time dashboards as unsupported. They are now supported. If your design routed around that limitation, revisit it.</p></div></aside></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="08-the-synchronization-model.html"><span class="dir">&#8592; Previous</span><span class="ttl">8. The synchronization model</span></a>
+<a class="next" href="10-exclusions-sensitivity-labels-and-limits.html"><span class="dir">Next &#8594;</span><span class="ttl">10. Exclusions, sensitivity labels and limits</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#9-1-how-items-are-represented-in-git">9.1 How items are represented in Git</a></li>
+<li><a href="#9-2-supported-item-inventory">9.2 Supported item inventory</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

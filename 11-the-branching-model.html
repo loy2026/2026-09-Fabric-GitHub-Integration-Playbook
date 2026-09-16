@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The branching model · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="11 — The branching model">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html" class="here"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part IV &middot; Development workflow</div><header class="pagehead"><div class="kicker">Part IV &middot; Development workflow</div><h1><span class="secnum">11</span>The branching model</h1></header><article><p class="lead">GitHub Flow has one long-lived branch and a rule about how changes reach it. Its simplicity is the point: the protection comes from the review gate, not from branch topology, so adding branches adds process without adding safety.</p>
+<h2 id="11-1-the-three-principles"><span class="secnum">11.1</span>The three principles<a class="permalink" href="#11-1-the-three-principles" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="2"><figcaption id="table-22"><span class="tabnum">Table 22.</span> The three principles of GitHub Flow</figcaption><div class="scroller"><table><colgroup><col style="width:26.2%"><col style="width:73.8%"></colgroup><thead><tr><th scope="col">Principle</th><th scope="col">What it means in practice</th></tr></thead><tbody><tr><td><span><strong>`main` is always deployable</strong></span></td><td><span>The content of <code>main</code> is production-ready at all times. Anything merged into it should be safe to deploy immediately. This is why <code>main</code> is what the Development workspaces are connected to, and why the ruleset in <a class="xref" href="16-hardening-the-repository-with-rulesets.html">Section 16</a> exists.</span></td></tr><tr><td><span><strong>All work happens on short-lived branches</strong></span></td><td><span>Every change — new feature, enhancement, bug fix — begins with a branch created from the current <code>main</code>. The branch is scoped to one unit of work and is deleted when it merges. &#x27;Short-lived&#x27; means days, not months.</span></td></tr><tr><td><span><strong>Changes return only through a pull request</strong></span></td><td><span>The pull request is where review, discussion and automated checks happen. There is no other path into <code>main</code>, and the repository enforces that rather than relying on people to remember.</span></td></tr></tbody></table></div></figure>
+<h2 id="11-2-why-not-gitflow"><span class="secnum">11.2</span>Why not GitFlow<a class="permalink" href="#11-2-why-not-gitflow" aria-label="Link to this section">#</a></h2>
+<p>GitFlow maintains <code>main</code>, <code>develop</code>, <code>release</code> and <code>hotfix</code> branches simultaneously. It was designed for software shipped in versioned releases to customers who cannot upgrade on demand. Analytics platforms are rarely in that position: content is promoted to a small number of environments the team controls, and the cadence is iterative.</p>
+<p>Applied to Fabric, GitFlow&#x27;s additional branches mostly create additional workspaces to keep in step. Each long-lived branch wants a workspace connected to it, each workspace consumes capacity, and each pair is another thing that can drift. The review gate — which is what actually prevents bad changes reaching production — is identical in both models.</p>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">Where a long-lived branch does earn its place</p><p>A <code>release/&lt;version&gt;</code> branch is worth introducing if you genuinely need to maintain a prior version while developing the next — for example a regulatory reporting solution where a filed period must remain reproducible. That is a specific, justified exception, not a default.</p></div></aside>
+<p><a class="xref" href="#figure-6">Figure 6</a> traces one change through the whole model: three actors, eight steps and one protected branch.</p>
+<figure class="diagram" id="figure-6"><button class="zoom" type="button" data-src="diagrams/d5_github_flow_lifecycle.svg" data-cap="Figure 6" title="Expand"><img src="diagrams/d5_github_flow_lifecycle.svg" alt="Figure 6. One change, end to end. Steps 1 to 3 are the developer in an isolated branch workspace; steps 4 to 7 are the repository and the reviewer; step 8 returns the merged change to the Development workspace and hands it to the release path." loading="lazy"></button><figcaption><span class="fignum">Figure 6.</span> One change, end to end. Steps 1 to 3 are the developer in an isolated branch workspace; steps 4 to 7 are the repository and the reviewer; step 8 returns the merged change to the Development workspace and hands it to the release path.</figcaption></figure>
+<h2 id="11-3-branch-naming"><span class="secnum">11.3</span>Branch naming<a class="permalink" href="#11-3-branch-naming" aria-label="Link to this section">#</a></h2>
+<p>The convention recommended in <a class="xref" href="06-repository-and-workspace-topology.html#6-2-naming-standards">Section 6.2</a> is repeated here because it is the part of this section people look up:</p>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code>feature/&lt;topic&gt;_&lt;YYYY_MM&gt;      feature/income_statement_2026_03
+bugfix/&lt;topic&gt;                 bugfix/sales_report_filter
+hotfix/&lt;incident-id&gt;           hotfix/INC-10482</code></pre></div><figcaption>Branch naming patterns, with an example of each.</figcaption></figure>
+<p>The rationale for each element: the prefix groups branches in the branch list and allows a ruleset to target them; the snake_case topic is legible and safe in tooling; the date marker makes a stale branch obvious without opening it.</p>
+<aside class="callout tip"><div class="co-label">Practice</div><div class="co-body"><p class="co-title">Review the branch list monthly</p><p>Branches whose date marker has passed and which have not merged are either abandoned or blocked. Both are worth knowing about. A branch list nobody prunes stops being useful within a quarter.</p></div></aside>
+<h2 id="11-4-creating-a-branch"><span class="secnum">11.4</span>Creating a branch<a class="permalink" href="#11-4-creating-a-branch" aria-label="Link to this section">#</a></h2>
+<p>A branch can be created in GitHub or from within Fabric. Creating it from within Fabric — through <em>Branch out</em> — is preferred because it creates the branch and the workspace together and connects them, which is the state you actually want. <a class="xref" href="12-branch-workspaces-and-isolated-development.html">Section 12</a> covers that path.</p>
+<p>To create a branch in GitHub directly:</p>
+<ol class="steps"><li>Open the repository and select the branch dropdown to review the existing branches. Check whether the work already has a branch before creating another.</li><li>Select the branch count or the <em>Branches</em> link to open the branches page.</li><li>Choose <em>New branch</em>.</li><li>Enter the name following the convention above, and set the source to <code>main</code>.</li><li>Create the branch. It is now selectable from the dropdown.</li></ol>
+<aside class="callout rule"><div class="co-label">Rule</div><div class="co-body"><p class="co-title">Always branch from current <code>main</code></p><p>Branching from another feature branch couples two units of work: the second cannot merge until the first does, and reverting the first becomes complicated. If you genuinely depend on unmerged work, say so in the pull request and get the dependency merged first.</p></div></aside>
+<h2 id="11-5-commit-discipline"><span class="secnum">11.5</span>Commit discipline<a class="permalink" href="#11-5-commit-discipline" aria-label="Link to this section">#</a></h2>
+<p>Within a branch, commit frequently and keep each commit to a single logical change. The benefit is not tidiness for its own sake:</p>
+<ul class="lvl0"><li>A reviewer can follow the reasoning commit by commit rather than confronting one large diff.</li><li>A single bad change can be reverted without unpicking unrelated work.</li><li><code>git log</code> becomes a usable history of why the code is as it is, rather than a list of <code>updates</code>.</li></ul>
+<p>Write commit messages in the imperative and say why, not what — the diff already says what:</p>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code><span class="cmt"># Useful</span>
+add currency conversion to revenue measure
+fix incorrect date grain in monthly rollup pipeline
+parameterize bronze lakehouse reference via variable library
+
+<span class="cmt"># Not useful</span>
+updates
+fixed it
+changes from review</code></pre></div><figcaption>Commit messages. The second group requires a reviewer to open the diff to learn anything at all.</figcaption></figure>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">A Fabric commit is a batch operation</p><p>Fabric commits the items you select in one commit. Atomicity therefore comes from selecting a coherent set of items rather than from committing one file at a time. The preview file-level commit capability narrows this gap for supported item types.</p></div></aside></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="10-exclusions-sensitivity-labels-and-limits.html"><span class="dir">&#8592; Previous</span><span class="ttl">10. Exclusions, sensitivity labels and limits</span></a>
+<a class="next" href="12-branch-workspaces-and-isolated-development.html"><span class="dir">Next &#8594;</span><span class="ttl">12. Branch workspaces and isolated development</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#11-1-the-three-principles">11.1 The three principles</a></li>
+<li><a href="#11-2-why-not-gitflow">11.2 Why not GitFlow</a></li>
+<li><a href="#11-3-branch-naming">11.3 Branch naming</a></li>
+<li><a href="#11-4-creating-a-branch">11.4 Creating a branch</a></li>
+<li><a href="#11-5-commit-discipline">11.5 Commit discipline</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

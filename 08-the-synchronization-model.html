@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The synchronization model · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="8 — The synchronization model">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html" class="here"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part II &middot; Establishing the integration</div><header class="pagehead"><div class="kicker">Part II &middot; Establishing the integration</div><h1><span class="secnum">8</span>The synchronization model</h1></header><article><p class="lead">Commit and Update look symmetrical and are not. Commit is selective and additive; Update is total and overwrites. Most day-to-day confusion about Fabric Git integration traces back to that asymmetry.</p>
+<p><a class="xref" href="#figure-5">Figure 5</a> summarizes the model and the states a workspace reports between the two actions.</p>
+<figure class="diagram" id="figure-5"><button class="zoom" type="button" data-src="diagrams/d6_sync_model.svg" data-cap="Figure 5" title="Expand"><img src="diagrams/d6_sync_model.svg" alt="Figure 5. Commit moves selected items from the workspace to the branch. Update takes the entire branch and applies it to the workspace. The states listed on the right are what the workspace reports between those two actions." loading="lazy"></button><figcaption><span class="fignum">Figure 5.</span> Commit moves selected items from the workspace to the branch. Update takes the entire branch and applies it to the workspace. The states listed on the right are what the workspace reports between those two actions.</figcaption></figure>
+<h2 id="8-1-bidirectional-but-never-simultaneous"><span class="secnum">8.1</span>Bidirectional, but never simultaneous<a class="permalink" href="#8-1-bidirectional-but-never-simultaneous" aria-label="Link to this section">#</a></h2>
+<p>Synchronization runs in one direction at a time. You cannot commit and update together. If changes have arrived in the branch, commits are disabled until the workspace has been updated. If the same item has been changed in both the workspace and the branch, updates are disabled until the conflict is resolved.</p>
+<aside class="callout rule"><div class="co-label">Rule</div><div class="co-body"><p class="co-title">Update first, then commit</p><p>When both directions have pending work: update, resolve any conflict, verify the workspace still behaves, then commit. Attempting to force the sequence the other way produces conflicts that are harder to reason about than the ones you started with.</p></div></aside>
+<h2 id="8-2-commit"><span class="secnum">8.2</span>Commit<a class="permalink" href="#8-2-commit" aria-label="Link to this section">#</a></h2>
+<ul class="lvl0"><li>Changed items appear under <em>Changes</em>. Where more than one item has changed, you choose which to commit.</li><li>A commit message is optional; if omitted, a default is supplied. Supply one anyway — the default tells a reviewer nothing.</li><li>Commits are disabled while updates are pending.</li><li>During a commit, Fabric <strong>deletes files inside an item folder that are not part of that item&#x27;s definition</strong>. Files elsewhere in the repository, outside item folders, are left alone. Do not store anything of your own inside an item folder.</li><li>A preview capability allows file-level commits within an item from the compare experience, for supported item types.</li></ul>
+<h2 id="8-3-update"><span class="secnum">8.3</span>Update<a class="permalink" href="#8-3-update" aria-label="Link to this section">#</a></h2>
+<ul class="lvl0"><li><em>Update</em> always applies the entire branch and syncs to the most recent commit. Individual items cannot be selected — this is the principal asymmetry with commit.</li><li>Folder changes are applied along with item changes.</li><li>Items present in the workspace but absent from the branch are removed.</li><li>Updates are disabled if the same item has changed in both places, until the conflict is resolved.</li></ul>
+<h2 id="8-4-the-source-control-pane"><span class="secnum">8.4</span>The source control pane<a class="permalink" href="#8-4-the-source-control-pane" aria-label="Link to this section">#</a></h2>
+<p>The source control icon at the top of the workspace shows a count of items that differ between workspace and branch. A count of zero means the two agree. The pane has three tabs:</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-16"><span class="tabnum">Table 16.</span> Source control pane tabs</figcaption><div class="scroller"><table><colgroup><col style="width:20.0%"><col style="width:56.9%"><col style="width:23.1%"></colgroup><thead><tr><th scope="col">Tab</th><th scope="col">Contains</th><th scope="col">Notes</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Commits and updates</span></th><td><span><em>Changes</em> — items modified in the workspace, awaiting commit.</span><span><em>Updates</em> — items modified in the branch, awaiting update.</span></td><td><span>The refresh control re-evaluates both lists.</span></td></tr><tr><th scope="row" class="strongcell"><span>Branches</span></th><td><span><em>Branch out</em> — create a branch workspace, or repoint an existing one.</span><span><em>Checkout new branch</em> — create a branch from the last synced commit without changing workspace content.</span><span><em>Switch branch</em> — re-sync the workspace to a different branch, overwriting all items.</span><span><em>Related branches</em> — navigate to linked workspaces.</span></td><td><span><em>Switch branch</em> is the destructive one. See <a class="xref" href="12-branch-workspaces-and-isolated-development.html#12-6-switching-branches-and-checking-out-a-new-branch">Section 12.6</a>.</span></td></tr><tr><th scope="row" class="strongcell"><span>Account details</span></th><td><span>The Git provider, account name, repository and branch. Currently available for GitHub-connected workspaces only.</span></td><td><span>Useful for confirming which account a connection is actually using.</span></td></tr></tbody></table></div></figure>
+<p>Connection information also appears along the bottom of the workspace: the connected branch, the time of the last sync, and a link to the commit the workspace is synced to. That link is the fastest way to answer “what version is this workspace running?”</p>
+<h2 id="8-5-item-status-values-and-what-each-one-means-you-should-do"><span class="secnum">8.5</span>Item status values, and what each one means you should do<a class="permalink" href="#8-5-item-status-values-and-what-each-one-means-you-should-do" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-17"><span class="tabnum">Table 17.</span> Git status values</figcaption><div class="scroller"><table><colgroup><col style="width:21.5%"><col style="width:47.7%"><col style="width:30.8%"></colgroup><thead><tr><th scope="col">Status</th><th scope="col">Meaning</th><th scope="col">Action</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Synced</span></th><td><span>The item is identical in the workspace and the branch.</span></td><td><span>None.</span></td></tr><tr><th scope="row" class="strongcell"><span>Uncommitted changes</span></th><td><span>Changed in the workspace only.</span></td><td><span>Commit it, once you are satisfied with the change.</span></td></tr><tr><th scope="row" class="strongcell"><span>Update required</span></th><td><span>Changed in the branch only.</span></td><td><span>Update the workspace.</span></td></tr><tr><th scope="row" class="strongcell"><span>Conflict</span></th><td><span>Changed in both the workspace and the branch.</span></td><td><span>Resolve before updating. Resolution is partly performed in Git rather than in Fabric.</span></td></tr><tr><th scope="row" class="strongcell"><span>Unsupported item</span></th><td><span>The item type is not supported by the integration.</span></td><td><span>Nothing to do. The item is ignored — not synchronized, but not deleted.</span></td></tr><tr><th scope="row" class="strongcell"><span>Same changes</span></th><td><span>Identical in both places, but the workspace needs to move to the latest commit.</span></td><td><span>Update to align the workspace with the current commit.</span></td></tr></tbody></table></div></figure>
+<h2 id="8-6-diffs-that-are-not-really-changes"><span class="secnum">8.6</span>Diffs that are not really changes<a class="permalink" href="#8-6-diffs-that-are-not-really-changes" aria-label="Link to this section">#</a></h2>
+<p>Several platform behaviours produce diffs that carry no functional meaning. Reviewers who do not expect them waste time on them, and — worse — start to distrust the diff.</p>
+<ul class="lvl0"><li><strong>Semantically insignificant reformatting.</strong> The service may rewrite definition files on commit. Renaming a semantic model column in Git and importing the change causes the Analysis Services engine to move that column to the end of the <code>columns</code> array in the <code>.bim</code> file on the next commit. Functionally irrelevant; visible as a change.</li><li><strong>Line ending conversion.</strong> The service uses LF. An item edited locally and committed with CRLF — for example a <code>.pbip</code> saved from Power BI Desktop — will be converted to LF on the next commit from the service, producing a whole-file diff.</li><li><strong>Enhanced Refresh API.</strong> Refreshing a semantic model through the Enhanced Refresh API produces a diff after each refresh.</li><li><strong>Workspace identity.</strong> An item using a workspace identity, once committed, can only be updated back into a workspace connected to the same identity. This affects branch-out.</li></ul>
+<aside class="callout tip"><div class="co-label">Practice</div><div class="co-body"><p class="co-title">Say this out loud during onboarding</p><p>Tell new team members about line-ending and column-reordering diffs on day one. It takes thirty seconds and prevents a class of review comment that wastes an hour each time it recurs.</p></div></aside>
+<h2 id="8-7-conflict-resolution"><span class="secnum">8.7</span>Conflict resolution<a class="permalink" href="#8-7-conflict-resolution" aria-label="Link to this section">#</a></h2>
+<p>A conflict means the same item changed in both the workspace and the branch since the last sync. Fabric surfaces it; resolution is partly a Git operation. Two practical approaches:</p>
+<ul class="lvl0"><li><strong>Checkout new branch.</strong> Create a branch from the last synced commit, repointing the workspace at it without changing its content, then commit the workspace version to that branch and merge through a pull request. This preserves both versions and makes the reconciliation reviewable, which is usually what you want.</li><li><strong>Discard one side.</strong> Either undo the workspace change and update from Git, or commit the workspace over the branch if the branch version is known to be wrong. Fast, and loses work — be certain which side you are discarding.</li></ul>
+<p>Conflicts are largely a symptom rather than a problem in their own right. They arise when two people work in the same workspace on the same branch. The branching model in <a class="xref" href="11-the-branching-model.html">Section 11</a> exists partly to make them rare.</p></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="07-connecting-a-workspace-safely.html"><span class="dir">&#8592; Previous</span><span class="ttl">7. Connecting a workspace safely</span></a>
+<a class="next" href="09-supported-items-and-their-representation-in-git.html"><span class="dir">Next &#8594;</span><span class="ttl">9. Supported items and their representation in Git</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#8-1-bidirectional-but-never-simultaneous">8.1 Bidirectional, but never simultaneous</a></li>
+<li><a href="#8-2-commit">8.2 Commit</a></li>
+<li><a href="#8-3-update">8.3 Update</a></li>
+<li><a href="#8-4-the-source-control-pane">8.4 The source control pane</a></li>
+<li><a href="#8-5-item-status-values-and-what-each-one-means-you-should-do">8.5 Item status values, and what each one means you should do</a></li>
+<li><a href="#8-6-diffs-that-are-not-really-changes">8.6 Diffs that are not really changes</a></li>
+<li><a href="#8-7-conflict-resolution">8.7 Conflict resolution</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

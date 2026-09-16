@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategic recommendations · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="22 — Strategic recommendations">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html" class="here"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part VI &middot; Operations and adoption</div><header class="pagehead"><div class="kicker">Part VI &middot; Operations and adoption</div><h1><span class="secnum">22</span>Strategic recommendations</h1></header><article><p class="lead">A summary of the judgements embedded in this playbook, separated from the procedures, so they can be argued with directly.</p>
+<h2 id="22-1-the-unified-view"><span class="secnum">22.1</span>The unified view<a class="permalink" href="#22-1-the-unified-view" aria-label="Link to this section">#</a></h2>
+<p>The framework as a whole is a single gated flow:</p>
+<ul class="lvl0"><li><strong>Foundation.</strong> The tenant and repository are configured and connected. A two-tier authentication model is established: developers hold fine-grained personal access tokens for interactive work; automation uses a service principal whose credentials are environment-scoped.</li><li><strong>Development.</strong> A developer creates a short-lived feature branch and branches out to an isolated workspace. Data sources resolve through a Variable Library, so the isolation is real.</li><li><strong>Integration.</strong> A pull request carries the change back to <code>main</code>. It is the point at which quality is determined: peer review by the reviewers team, plus whatever automated checks exist, enforced by a ruleset rather than by convention.</li><li><strong>Release.</strong> <code>main</code> updates the Development workspaces, and deployment pipelines promote through protected environments to production.</li></ul>
+<p>Every production change is therefore versioned, peer-reviewed, scanned, traceable to a person and a discussion, and reversible. That combination is the deliverable — not the tooling.</p>
+<h2 id="22-2-ten-recommendations"><span class="secnum">22.2</span>Ten recommendations<a class="permalink" href="#22-2-ten-recommendations" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="2"><figcaption id="table-43"><span class="tabnum">Table 43.</span> Ten recommendations</figcaption><div class="scroller"><table><colgroup><col style="width:6.5%"><col style="width:93.5%"></colgroup><thead><tr><th scope="col">#</th><th scope="col">Recommendation</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>1</span></th><td><span><strong>Treat the first synchronization as a change-controlled event.</strong> A clone, a second pair of eyes on the folder state, and a baseline commit within minutes. This is the only irreversible step in the whole process.</span></td></tr><tr><th scope="row" class="strongcell"><span>2</span></th><td><span><strong>Externalize every environment-specific value before enabling branch-out.</strong> <a class="xref" href="13-the-data-isolation-problem.html">Section 13</a> is load-bearing. Without it, branch workspaces provide the appearance of isolation and none of the substance, which is a worse position than having no branch workspaces at all.</span></td></tr><tr><th scope="row" class="strongcell"><span>3</span></th><td><span><strong>Use a branch workspace admin profile if workspace creation is centralized.</strong> It resolves the tension between self-service development and central control, and it is the most valuable capability added to this pattern since it was first written. Assign the consented identity deliberately — it is a single point of failure.</span></td></tr><tr><th scope="row" class="strongcell"><span>4</span></th><td><span><strong>Grant repository permissions to teams sourced from the identity provider, never to individuals.</strong> The leaver gap is the most common genuine security finding in this area, and SCIM closes it without anyone having to remember.</span></td></tr><tr><th scope="row" class="strongcell"><span>5</span></th><td><span><strong>Put deployment credentials in environment secrets and restrict deployment branches.</strong> Repository secrets are readable by any workflow on any branch. Restricting deployment branches to <code>main</code> is what makes the environment scope meaningful rather than decorative.</span></td></tr><tr><th scope="row" class="strongcell"><span>6</span></th><td><span><strong>Enable secret scanning with push protection on day one.</strong> Of everything optional, this is the one to do immediately. Rejecting a secret before it is pushed is qualitatively better than detecting it afterwards, because a pushed secret must be rotated regardless.</span></td></tr><tr><th scope="row" class="strongcell"><span>7</span></th><td><span><strong>Enforce Fabric&#x27;s own limits in the repository.</strong> File size, path length and path restriction rules turn silent sync failures into clear push rejections that name the problem.</span></td></tr><tr><th scope="row" class="strongcell"><span>8</span></th><td><span><strong>Verify the controls and keep the evidence.</strong> Run the tests in <a class="xref" href="16-hardening-the-repository-with-rulesets.html#16-8-verifying-the-ruleset-works">Section 16.8</a>. An untested control is an assumption, and the evidence is far easier to capture now than to reconstruct during an audit.</span></td></tr><tr><th scope="row" class="strongcell"><span>9</span></th><td><span><strong>Treat bypass as an audited exception.</strong> Grant it to a small named group, expect an incident record with each use, and review bypass events on a schedule rather than on suspicion. This is the mechanism by which a control quietly stops being one.</span></td></tr><tr><th scope="row" class="strongcell"><span>10</span></th><td><span><strong>Re-verify this playbook against the platform at least quarterly.</strong> Several capabilities described here were in preview. Fabric Git integration changes faster than most documentation cycles, and a playbook describing behaviour the platform no longer has is worse than none.</span></td></tr></tbody></table></div></figure>
+<h2 id="22-3-the-trade-offs-worth-stating-plainly"><span class="secnum">22.3</span>The trade-offs worth stating plainly<a class="permalink" href="#22-3-the-trade-offs-worth-stating-plainly" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="2"><figcaption id="table-44"><span class="tabnum">Table 44.</span> Acknowledged trade-offs</figcaption><div class="scroller"><table><colgroup><col style="width:32.3%"><col style="width:67.7%"></colgroup><thead><tr><th scope="col">Trade-off</th><th scope="col">Assessment</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Branch workspaces consume capacity.</span></th><td><span>Real, and the cost is proportional to team size and branch discipline. Mitigate by deleting branch workspaces when their release ships and by using selective branching for small changes. Do not mitigate by sharing branch workspaces — that removes the isolation the cost is buying.</span></td></tr><tr><th scope="row" class="strongcell"><span>Required reviews lengthen cycle time.</span></th><td><span>Real. A single approval is a modest cost for the assurance gained. Two approvals roughly doubles the waiting and is justified for regulated or financial reporting content — not universally.</span></td></tr><tr><th scope="row" class="strongcell"><span>The Variable Library is additional work to set up and maintain.</span></th><td><span>Real, and it is the work that makes everything else function. Consider it part of the cost of source control rather than an optional enhancement.</span></td></tr><tr><th scope="row" class="strongcell"><span>Rulesets block operations people are used to performing.</span></th><td><span>By design. Expect friction in the first weeks, particularly around committing from a workspace connected to <code>main</code>. The answer is explanation, not relaxation.</span></td></tr><tr><th scope="row" class="strongcell"><span>Preview features may change or be withdrawn.</span></th><td><span>Real and unavoidable. Prefer designs that degrade gracefully, and record which preview capabilities you depend on so the exposure is known rather than discovered.</span></td></tr><tr><th scope="row" class="strongcell"><span>Centralized workspace creation slows development.</span></th><td><span>Real, and largely solvable with a branch workspace admin profile. Where it cannot be solved, agree a request path and a turnaround expectation rather than leaving developers to escalate individually.</span></td></tr></tbody></table></div></figure></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="21-implementation-roadmap.html"><span class="dir">&#8592; Previous</span><span class="ttl">21. Implementation roadmap</span></a>
+<a class="next" href="23-conclusion.html"><span class="dir">Next &#8594;</span><span class="ttl">23. Conclusion</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#22-1-the-unified-view">22.1 The unified view</a></li>
+<li><a href="#22-2-ten-recommendations">22.2 Ten recommendations</a></li>
+<li><a href="#22-3-the-trade-offs-worth-stating-plainly">22.3 The trade-offs worth stating plainly</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

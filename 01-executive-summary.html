@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="1 — Executive summary">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html" class="here"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part I &middot; Foundations</div><header class="pagehead"><div class="kicker">Part I &middot; Foundations</div><h1><span class="secnum">1</span>Executive summary</h1></header><article><p class="lead">Fabric development without source control is a set of unversioned changes made directly to live workspaces by whoever has access. This playbook replaces that with a disciplined engineering practice: every change is versioned, reviewed by a second person, recoverable, and promoted through a controlled path. The mechanics are straightforward. The failure modes are not, and most of this document is about those.</p>
+<h2 id="1-1-what-the-integration-gives-you"><span class="secnum">1.1</span>What the integration gives you<a class="permalink" href="#1-1-what-the-integration-gives-you" aria-label="Link to this section">#</a></h2>
+<p>Microsoft Fabric implements application lifecycle management through two complementary mechanisms. <strong>Git integration</strong> connects a workspace to a repository branch and folder, writing item definitions out as human-readable text so they can be versioned, branched, diffed, reviewed and restored. <strong>Deployment pipelines</strong> promote content across Development, Test and Production stages, rebinding environment-specific configuration as content moves. Git integration is the continuous-integration half; deployment pipelines are the continuous-delivery half. They are designed to be used together and neither replaces the other.</p>
+<p>A third mechanism, the <strong>Variable Library</strong>, holds environment-specific values with a separate value set per stage. It is what allows the same item definition to point at different data in different workspaces. It did not exist in earlier iterations of this pattern and it is the single most useful addition, because it closes the gap described below.</p>
+<h2 id="1-2-the-ten-conclusions-that-matter"><span class="secnum">1.2</span>The ten conclusions that matter<a class="permalink" href="#1-2-the-ten-conclusions-that-matter" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-4"><span class="tabnum">Table 4.</span> The ten conclusions that matter</figcaption><div class="scroller"><table><colgroup><col style="width:5.5%"><col style="width:79.3%"><col style="width:15.2%"></colgroup><thead><tr><th scope="col">#</th><th scope="col">Conclusion</th><th scope="col">Where it is covered</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>1</span></th><td><span><strong>The first synchronization is the most dangerous action in the whole integration.</strong> Connecting a workspace to a non-empty branch folder and choosing <em>Update workspace from Git</em> deletes workspace items. A folder containing nothing but a README still counts as non-empty. Always connect to a genuinely empty folder, then commit a baseline immediately.</span></td><td><span><a class="xref" href="07-connecting-a-workspace-safely.html">Section 7</a></span></td></tr><tr><th scope="row" class="strongcell"><span>2</span></th><td><span><strong>Clone before you connect.</strong> A Fabric workspace, unlike a Git branch, cannot be rolled back to an earlier state. Use a deployment pipeline stage to clone the workspace as a rollback target, re-hydrate its data, and verify it runs before touching source-control settings.</span></td><td><span><a class="xref" href="07-connecting-a-workspace-safely.html#7-2-preflight-clone-the-workspace-as-a-rollback-target">Section 7.2</a></span></td></tr><tr><th scope="row" class="strongcell"><span>3</span></th><td><span><strong>Authentication is two-tier and cannot be collapsed.</strong> The workspace-to-GitHub connection is user-delegated and authenticated by an individual&#x27;s fine-grained personal access token; service principal authentication for the Git connection is documented for Azure DevOps and not for GitHub. Automation uses a separate Entra ID service principal whose credentials live in environment-scoped GitHub secrets.</span></td><td><span><a class="xref" href="05-authentication-and-identity.html">Section 5</a></span></td></tr><tr><th scope="row" class="strongcell"><span>4</span></th><td><span><strong>Branch-out copies items, not data.</strong> A branch workspace is an isolated copy of the code and definitions only. A notebook in it still points at the lakehouse it was branched from. Without a Variable Library or automated seeding, a developer can corrupt shared data while believing they are in a sandbox.</span></td><td><span><a class="xref" href="13-the-data-isolation-problem.html">Section 13</a></span></td></tr><tr><th scope="row" class="strongcell"><span>5</span></th><td><span><strong>Folder structure changes need their own commit.</strong> If the workspace has folders that the branch does not, the two are considered different. Updating before committing lets the branch&#x27;s structure overwrite the workspace&#x27;s — deleting the new folders and everything in them.</span></td><td><span><a class="xref" href="07-connecting-a-workspace-safely.html#7-4-the-folder-synchronization-pitfall">Section 7.4</a></span></td></tr><tr><th scope="row" class="strongcell"><span>6</span></th><td><span><strong>Rulesets, not legacy branch protection.</strong> Rulesets layer, are visible to anyone with read access, can be enabled and disabled without deletion, and can be applied organization-wide. They also offer rules that map directly onto Fabric&#x27;s own constraints — file size, path length and path restrictions.</span></td><td><span><a class="xref" href="16-hardening-the-repository-with-rulesets.html">Section 16</a></span></td></tr><tr><th scope="row" class="strongcell"><span>7</span></th><td><span><strong>Grant permissions to teams, never to people.</strong> Four teams — administrators, reviewers, developers, auditors — mapped to the Admin, Maintain, Write and Read repository roles produce a clean separation of duties. Source team membership from the identity provider so that leavers lose access automatically.</span></td><td><span><a class="xref" href="15-access-model-teams-roles-and-identity.html">Section 15</a></span></td></tr><tr><th scope="row" class="strongcell"><span>8</span></th><td><span><strong>Deployment credentials belong to an environment, not a repository.</strong> Repository secrets are readable by any workflow on any branch, including a developer&#x27;s experimental branch. Environment secrets are exposed only to the job targeting that environment, and only after its protection rules are satisfied.</span></td><td><span><a class="xref" href="17-environments-and-credential-management.html">Section 17</a></span></td></tr><tr><th scope="row" class="strongcell"><span>9</span></th><td><span><strong>Rollback method depends on who else has the commit.</strong> Use <code>git revert</code> on any shared branch: it is additive and preserves history. Reserve <code>git reset --hard</code> for branches nobody else has pulled. Then re-sync the Fabric workspace from the restored branch — and remember that Git restores definitions, not data.</span></td><td><span><a class="xref" href="19-rollback-and-restore.html">Section 19</a></span></td></tr><tr><th scope="row" class="strongcell"><span>10</span></th><td><span><strong>Hard-coded environment values are the root cause of most failed implementations.</strong> Workspace names, lakehouse references, connection strings and database names belong in a Variable Library. Everything else in this playbook depends on that discipline holding.</span></td><td><span><a class="xref" href="13-the-data-isolation-problem.html#13-3-the-design-rule">Section 13.3</a></span></td></tr></tbody></table></div></figure>
+<h2 id="1-3-what-a-successful-implementation-looks-like"><span class="secnum">1.3</span>What a successful implementation looks like<a class="permalink" href="#1-3-what-a-successful-implementation-looks-like" aria-label="Link to this section">#</a></h2>
+<p>At the end of the work described here, the following statements are all true of the environment, and each is independently verifiable:</p>
+<ul class="lvl0"><li>No one can change production content without a peer-reviewed pull request — not because policy says so, but because the repository refuses the push.</li><li>Any change can be traced from the production artefact back to the commit, the pull request, the reviewer who approved it and the person who wrote it.</li><li>Any change can be reverted without reconstructing it by hand.</li><li>A developer can build and test in isolation without risk to shared data.</li><li>A person joining or leaving a team gains or loses access without a manual repository change.</li><li>Production deployment credentials are not readable by a workflow running on a feature branch.</li></ul>
+<p><a class="xref" href="#figure-1">Figure 1</a> shows how those statements fit together: three bands — isolated development, gated integration, controlled release — each of which is the subject of at least one section below.</p>
+<figure class="diagram" id="figure-1"><button class="zoom" type="button" data-src="diagrams/d1_reference_architecture.svg" data-cap="Figure 1" title="Expand"><img src="diagrams/d1_reference_architecture.svg" alt="Figure 1. The target architecture. Development is isolated per unit of work; integration is gated; release is controlled and separately audited. Each of the three bands is the subject of at least one section of this playbook." loading="lazy"></button><figcaption><span class="fignum">Figure 1.</span> The target architecture. Development is isolated per unit of work; integration is gated; release is controlled and separately audited. Each of the three bands is the subject of at least one section of this playbook.</figcaption></figure></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="00-document-control.html"><span class="dir">&#8592; Previous</span><span class="ttl">0. Document control</span></a>
+<a class="next" href="02-how-to-use-this-playbook.html"><span class="dir">Next &#8594;</span><span class="ttl">2. How to use this playbook</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#1-1-what-the-integration-gives-you">1.1 What the integration gives you</a></li>
+<li><a href="#1-2-the-ten-conclusions-that-matter">1.2 The ten conclusions that matter</a></li>
+<li><a href="#1-3-what-a-successful-implementation-looks-like">1.3 What a successful implementation looks like</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

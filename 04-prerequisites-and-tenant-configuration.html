@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prerequisites and tenant configuration · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="4 — Prerequisites and tenant configuration">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html" class="here"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part II &middot; Establishing the integration</div><header class="pagehead"><div class="kicker">Part II &middot; Establishing the integration</div><h1><span class="secnum">4</span>Prerequisites and tenant configuration</h1></header><article><p class="lead">Nothing in this playbook works until a small number of gatekeeping settings are in place on both platforms. They are unremarkable individually; the reason they are treated carefully here is that they are usually owned by different teams, and the integration is frequently blocked by a setting nobody realised they needed to request.</p>
+<h2 id="4-1-capacity"><span class="secnum">4.1</span>Capacity<a class="permalink" href="#4-1-capacity" aria-label="Link to this section">#</a></h2>
+<p>Git integration requires a Fabric capacity. All supported Fabric item types need one; an existing Power BI Premium capacity can be used, but certain Power BI SKUs support Power BI items only. Branch-out also requires available capacity at the moment the operation runs — a branch workspace must be assigned to a capacity to function, and a branch-out will fail if none is available.</p>
+<aside class="callout tip"><div class="co-label">Practice</div><div class="co-body"><p class="co-title">Plan branch workspace capacity explicitly</p><p>A team of eight developers each holding an open branch workspace is eight additional workspaces drawing on capacity. Decide up front whether they share the main capacity or use a dedicated development capacity, and set an expectation that branch workspaces are deleted when their release ships.</p></div></aside>
+<h2 id="4-2-fabric-tenant-settings"><span class="secnum">4.2</span>Fabric tenant settings<a class="permalink" href="#4-2-fabric-tenant-settings" aria-label="Link to this section">#</a></h2>
+<p>The following tenant switches must be enabled. Depending on the tenant&#x27;s delegation configuration, they may be set by a tenant administrator, a capacity administrator or a workspace administrator.</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-7"><span class="tabnum">Table 7.</span> Required Fabric tenant settings</figcaption><div class="scroller"><table><colgroup><col style="width:29.0%"><col style="width:39.1%"><col style="width:31.9%"></colgroup><thead><tr><th scope="col">Setting</th><th scope="col">Why it is needed</th><th scope="col">Consequence if disabled</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Users can create Fabric items</span></th><td><span>Permits creation of the notebooks, pipelines, lakehouses and models that source control will manage.</span></td><td><span>Users cannot create the assets the integration exists to version.</span></td></tr><tr><th scope="row" class="strongcell"><span>Users can synchronize workspace items with their Git repositories</span></th><td><span>The master switch that activates Git integration across the tenant.</span></td><td><span>The <em>Git integration</em> tab does not function in workspace settings.</span></td></tr><tr><th scope="row" class="strongcell"><span>Users can sync workspace items with GitHub repositories</span></th><td><span>Provider-specific switch for GitHub. Distinct from the general switch above.</span></td><td><span>GitHub cannot be selected as a provider even though Git integration is enabled.</span></td></tr><tr><th scope="row" class="strongcell"><span>Create workspaces</span></th><td><span>Required for branch-out to a new workspace, which is the foundation of the isolated development workflow.</span></td><td><span>Developers cannot branch out to a new workspace. See <a class="xref" href="12-branch-workspaces-and-isolated-development.html#12-4-branch-workspace-admin-profiles-reconciling-self-servic">Section 12.4</a> for the reconciliation.</span></td></tr><tr><th scope="row" class="strongcell"><span>Service principals can call Fabric public APIs</span><span><em>(Developer settings)</em></span></th><td><span>Required for any CI/CD automation that calls the Fabric REST API. The specific service principal, or a security group containing it, must be added to the allowed list.</span></td><td><span>Automation cannot authenticate. Interactive Git integration is unaffected.</span></td></tr><tr><th scope="row" class="strongcell"><span>Users can export items to Git repositories in other geographical locations</span></th><td><span>Needed when the workspace and repository are in different regions. Applies to Azure DevOps; not required for GitHub.</span></td><td><span>Cross-region export is blocked for Azure DevOps repositories.</span></td></tr><tr><th scope="row" class="strongcell"><span>Users can export workspace items with applied sensitivity labels to Git repositories</span></th><td><span>Only relevant if items carry sensitivity labels and the organization has decided to permit their export.</span></td><td><span>Items with sensitivity labels cannot be committed. See <a class="xref" href="10-exclusions-sensitivity-labels-and-limits.html#10-2-sensitivity-labels-and-data-protection">Section 10.2</a>.</span></td></tr></tbody></table></div></figure>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">A permission change is coming</p><p>From <strong>1 December 2026</strong>, users without read-write permission on workspace items cannot use Git integration. Where sensitivity labels or protection policies restrict a user&#x27;s access to particular items, that user may lose the ability to use Git integration in that workspace. Audit which contributors hold partial item-level access before that date.</p></div></aside>
+<h2 id="4-3-github-prerequisites"><span class="secnum">4.3</span>GitHub prerequisites<a class="permalink" href="#4-3-github-prerequisites" aria-label="Link to this section">#</a></h2>
+<ul class="lvl0"><li><strong>An active GitHub account</strong> for every person who will connect a workspace. The Git connection is per user — accounts and tokens are not shared.</li><li><strong>A dedicated repository per project</strong>, created before the first connection and left empty of the folders Fabric will create. See <a class="xref" href="07-connecting-a-workspace-safely.html#7-1-why-the-failure-mode-exists">Section 7.1</a> for why this matters.</li><li><strong>Cloud-hosted GitHub, GitHub Enterprise Cloud or GitHub Enterprise Server.</strong> Several Enterprise Server configurations are unsupported: a custom domain (even when publicly reachable), hosting on a private network, and IP allow-listing.</li><li><strong>Rulesets require a plan that includes them.</strong> Rulesets are available in public repositories on all plans, and in private repositories on GitHub Pro, Team and Enterprise Cloud. Push rulesets in private and internal repositories require Team or above, and some environment protection rules require Enterprise. Confirm the plan before designing the hardening in <a class="xref" href="16-hardening-the-repository-with-rulesets.html">Sections 16</a> and 17 around them.</li></ul>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">If you are migrating from Azure DevOps</p><p>Fabric Git integration calls the underlying provider&#x27;s APIs, and their capabilities and limits differ. Run validation tests before committing to a migration from Azure DevOps to GitHub Enterprise rather than assuming behavioural parity.</p></div></aside>
+<h2 id="4-4-permissions-required-to-perform-each-operation"><span class="secnum">4.4</span>Permissions required to perform each operation<a class="permalink" href="#4-4-permissions-required-to-perform-each-operation" aria-label="Link to this section">#</a></h2>
+<p>Two permission sets apply simultaneously: the role held in the Fabric workspace and the permission held in the Git repository. The more restrictive of the two governs. The tables below replace the permission screenshots in the source material and should be treated as the authoritative reference when troubleshooting an operation that is unexpectedly unavailable.</p>
+<figure class="tablewrap" data-cols="2"><figcaption id="table-8"><span class="tabnum">Table 8.</span> Fabric workspace role required, by operation</figcaption><div class="scroller"><table><colgroup><col style="width:38.5%"><col style="width:61.5%"></colgroup><thead><tr><th scope="col">Operation</th><th scope="col">Workspace role required</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Connect workspace to a repository</span></th><td><span>Admin</span></td></tr><tr><th scope="row" class="strongcell"><span>Synchronize workspace with the repository</span></th><td><span>Admin</span></td></tr><tr><th scope="row" class="strongcell"><span>Disconnect workspace from the repository</span></th><td><span>Admin</span></td></tr><tr><th scope="row" class="strongcell"><span>Switch branch, or change any connection setting</span></th><td><span>Admin always. Member or Contributor with write permission on all items, when the workspace setting <em>Allow users with at least Contributor role to change Git branch</em> is enabled.</span></td></tr><tr><th scope="row" class="strongcell"><span>View Git connection details</span></th><td><span>Admin, Member, Contributor</span></td></tr><tr><th scope="row" class="strongcell"><span>See workspace Git status</span></th><td><span>Admin, Member, Contributor</span></td></tr><tr><th scope="row" class="strongcell"><span>Update from Git</span></th><td><span>Contributor or above with write permission on all items; item owner where the tenant switch blocks updates by non-owners; Build permission on external dependencies where applicable.</span></td></tr><tr><th scope="row" class="strongcell"><span>Commit workspace changes to Git</span></th><td><span>Contributor or above with write permission on all items; item owner where the tenant switch blocks updates by non-owners; Build permission on external dependencies where applicable.</span></td></tr><tr><th scope="row" class="strongcell"><span>Create a new Git branch from within Fabric</span></th><td><span>Admin always. Member or Contributor with write permission on all items, when <em>Allow users with at least Contributor role to change Git branch</em> is enabled.</span></td></tr><tr><th scope="row" class="strongcell"><span>Branch out to another workspace</span></th><td><span>Admin, Member, Contributor</span></td></tr><tr><th scope="row" class="strongcell"><span>Any operation at all</span></th><td><span>A Viewer can perform none of these and sees no Git information in the workspace.</span></td></tr></tbody></table></div></figure>
+<figure class="tablewrap" data-cols="2"><figcaption id="table-9"><span class="tabnum">Table 9.</span> GitHub repository permission required, by operation</figcaption><div class="scroller"><table><colgroup><col style="width:38.5%"><col style="width:61.5%"></colgroup><thead><tr><th scope="col">Operation</th><th scope="col">GitHub permission required</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Connect workspace to a repository</span></th><td><span>Read</span></td></tr><tr><th scope="row" class="strongcell"><span>Synchronize workspace with the repository</span></th><td><span>Read</span></td></tr><tr><th scope="row" class="strongcell"><span>Disconnect workspace from the repository</span></th><td><span>None</span></td></tr><tr><th scope="row" class="strongcell"><span>Switch branch or change connection settings</span></th><td><span>Read on the target repository, folder and branch</span></td></tr><tr><th scope="row" class="strongcell"><span>View Git connection details</span></th><td><span>Read, or none</span></td></tr><tr><th scope="row" class="strongcell"><span>See workspace Git status</span></th><td><span>Read</span></td></tr><tr><th scope="row" class="strongcell"><span>Update from Git</span></th><td><span>Read</span></td></tr><tr><th scope="row" class="strongcell"><span>Commit workspace changes to Git</span></th><td><span>Write, and the branch policy must permit the commit. A ruleset that requires a pull request will — correctly — block a direct commit to <code>main</code>.</span></td></tr><tr><th scope="row" class="strongcell"><span>Create a new Git branch from within Fabric</span></th><td><span>Write, with branch creation allowed</span></td></tr><tr><th scope="row" class="strongcell"><span>Branch out to another workspace</span></th><td><span>Read, with branch creation allowed</span></td></tr></tbody></table></div></figure>
+<aside class="callout rule"><div class="co-label">Rule</div><div class="co-body"><p class="co-title">Commit to a protected branch will fail, and should</p><p>Once <code>main</code> carries a ruleset requiring pull requests, a workspace connected to <code>main</code> can no longer commit to it. This is the intended outcome. Development workspaces connected to <code>main</code> are <em>update</em> targets, not <em>commit</em> sources. All commits originate from branch workspaces on feature branches.</p></div></aside>
+<h2 id="4-5-organizational-coordination"><span class="secnum">4.5</span>Organizational coordination<a class="permalink" href="#4-5-organizational-coordination" aria-label="Link to this section">#</a></h2>
+<p>Three of the required capabilities — workspace creation, repository creation and workspace administration — are commonly held by a central platform or administration team rather than by the engineering team doing the work. This is a reasonable control, but it makes the integration a coordinated activity rather than a self-service one.</p>
+<aside class="callout local"><div class="co-label">Localize</div><div class="co-body"><p class="co-title">Agree the provisioning model before starting</p><p>Decide and record: who creates workspaces, who creates repositories, who holds workspace Admin, what the request path and turnaround expectation is, and whether the branch workspace admin profile described in <a class="xref" href="12-branch-workspaces-and-isolated-development.html#12-4-branch-workspace-admin-profiles-reconciling-self-servic">Section 12.4</a> will be used to restore self-service branch-out without granting broad workspace-creation rights. A plan that assumes developers can create workspaces, in an organization where they cannot, stalls at the first branch-out.</p></div></aside></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="03-core-concepts.html"><span class="dir">&#8592; Previous</span><span class="ttl">3. Core concepts</span></a>
+<a class="next" href="05-authentication-and-identity.html"><span class="dir">Next &#8594;</span><span class="ttl">5. Authentication and identity</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#4-1-capacity">4.1 Capacity</a></li>
+<li><a href="#4-2-fabric-tenant-settings">4.2 Fabric tenant settings</a></li>
+<li><a href="#4-3-github-prerequisites">4.3 GitHub prerequisites</a></li>
+<li><a href="#4-4-permissions-required-to-perform-each-operation">4.4 Permissions required to perform each operation</a></li>
+<li><a href="#4-5-organizational-coordination">4.5 Organizational coordination</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

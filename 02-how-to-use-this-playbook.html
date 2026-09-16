@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to use this playbook · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="2 — How to use this playbook">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html" class="here"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part I &middot; Foundations</div><header class="pagehead"><div class="kicker">Part I &middot; Foundations</div><h1><span class="secnum">2</span>How to use this playbook</h1></header><article><h2 id="2-1-reading-paths"><span class="secnum">2.1</span>Reading paths<a class="permalink" href="#2-1-reading-paths" aria-label="Link to this section">#</a></h2>
+<p>The document is written to be read end to end once, then used as a reference. If time is short, these are the shortest useful paths through it.</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-5"><span class="tabnum">Table 5.</span> Reading paths by role and purpose</figcaption><div class="scroller"><table><colgroup><col style="width:24.6%"><col style="width:27.5%"><col style="width:47.8%"></colgroup><thead><tr><th scope="col">If you are…</th><th scope="col">Read, in order</th><th scope="col">Why</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Standing up the integration for the first time</span></th><td><span><a class="xref" href="04-prerequisites-and-tenant-configuration.html">Sections 4</a>, 5, 6, 7, then <a class="xref" href="appendix-c.html">Appendix C</a></span></td><td><span>Prerequisites, identity, naming, the safe connection procedure and the runbook checklist. Do not connect a workspace before reading <a class="xref" href="07-connecting-a-workspace-safely.html">Section 7</a>.</span></td></tr><tr><th scope="row" class="strongcell"><span>A developer joining a team already using this pattern</span></th><td><span><a class="xref" href="03-core-concepts.html">Sections 3</a>, 8, 11, 12, 13, 14</span></td><td><span>Concepts, how synchronization actually behaves, the branching model, branch workspaces, the data isolation problem and the pull request process.</span></td></tr><tr><th scope="row" class="strongcell"><span>Hardening an environment that already works</span></th><td><span><a class="xref" href="15-access-model-teams-roles-and-identity.html">Sections 15</a>, 16, 17, 18</span></td><td><span>Access model, rulesets, environments and secrets, optional automated scanning.</span></td></tr><tr><th scope="row" class="strongcell"><span>Responding to a bad change in production</span></th><td><span><a class="xref" href="19-rollback-and-restore.html">Section 19</a>, then <a class="xref" href="appendix-f.html">Appendix F</a></span></td><td><span>Rollback decision, the two procedures, re-syncing Fabric, and the command reference.</span></td></tr><tr><th scope="row" class="strongcell"><span>Building a business case or an implementation plan</span></th><td><span><a class="xref" href="01-executive-summary.html">Sections 1</a>, 2, 21, 22</span></td><td><span>Executive summary, scope, the phased roadmap and the strategic recommendations.</span></td></tr><tr><th scope="row" class="strongcell"><span>Auditing the environment</span></th><td><span><a class="xref" href="15-access-model-teams-roles-and-identity.html">Sections 15</a>, 16, 17, 20, <a class="xref" href="appendix-d.html">Appendix D</a></span></td><td><span>Who can do what, what the repository enforces, how credentials are scoped, and what evidence exists.</span></td></tr></tbody></table></div></figure>
+<h2 id="2-2-conventions"><span class="secnum">2.2</span>Conventions<a class="permalink" href="#2-2-conventions" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="2"><figcaption id="table-6"><span class="tabnum">Table 6.</span> Typographic and callout conventions</figcaption><div class="scroller"><table><colgroup><col style="width:24.6%"><col style="width:75.4%"></colgroup><thead><tr><th scope="col">Convention</th><th scope="col">Meaning</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span><code>&lt;angle brackets&gt;</code></span></th><td><span>A placeholder to be resolved for your environment. See <a class="xref" href="00-document-control.html#0-3-placeholder-conventions">Section 0.3</a>.</span></td></tr><tr><th scope="row" class="strongcell"><span><code>Monospace</code></span></th><td><span>A literal value, command, file name, setting name or identifier.</span></td></tr><tr><th scope="row" class="strongcell"><span><em>Italic</em></span></th><td><span>A user-interface element the reader is asked to click or select.</span></td></tr><tr><th scope="row" class="strongcell"><span>→</span></th><td><span>Navigation through a user interface, e.g. <em>Workspace settings → Git integration</em>.</span></td></tr><tr><th scope="row" class="strongcell"><span>CAUTION callout</span></th><td><span>An action that can destroy work. Read before acting.</span></td></tr><tr><th scope="row" class="strongcell"><span>RULE callout</span></th><td><span>A non-negotiable operating rule for the environment.</span></td></tr><tr><th scope="row" class="strongcell"><span>PRACTICE callout</span></th><td><span>A recommended practice with a stated rationale, which a team may reasonably vary.</span></td></tr><tr><th scope="row" class="strongcell"><span>NOTE callout</span></th><td><span>Clarification, platform behaviour or a version caveat.</span></td></tr><tr><th scope="row" class="strongcell"><span>LOCALIZE callout</span></th><td><span>A decision this playbook deliberately leaves to the adopting organization.</span></td></tr></tbody></table></div></figure>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">On preview features</p><p>A number of capabilities described here — including several item types, branch workspace admin profiles, selective branching and file-level commit — were in preview at the time of writing. Preview behaviour changes without notice and is generally not covered by production support commitments. Verify the current state of anything you intend to depend on, and prefer a design that degrades gracefully if a preview capability is withdrawn.</p></div></aside>
+<h2 id="2-3-how-to-adapt-rather-than-copy"><span class="secnum">2.3</span>How to adapt rather than copy<a class="permalink" href="#2-3-how-to-adapt-rather-than-copy" aria-label="Link to this section">#</a></h2>
+<p>The temptation with a playbook is to adopt it verbatim. Three decisions genuinely depend on your context and should be made deliberately rather than inherited:</p>
+<ul class="lvl0"><li><strong>Repository granularity.</strong> One repository per project is the default recommended here. A single repository for an entire estate simplifies governance but couples release cadences; one repository per workspace fragments review. <a class="xref" href="06-repository-and-workspace-topology.html#6-3-repository-granularity-the-decision-to-make-deliberately">Section 6.3</a> sets out the trade-off.</li><li><strong>Who may create workspaces.</strong> Branch-out is far more useful when developers can create their own workspaces. Many organizations restrict workspace creation to a central administration team. <a class="xref" href="12-branch-workspaces-and-isolated-development.html#12-4-branch-workspace-admin-profiles-reconciling-self-servic">Section 12.4</a> describes the capability that reconciles the two.</li><li><strong>How much automation to build.</strong> <a class="xref" href="16-hardening-the-repository-with-rulesets.html">Sections 16</a> and 18 mark automated status checks as optional. The manual gates — required reviews, protected branches, environment approvals — deliver most of the risk reduction. Automated testing of notebooks and data quality is a worthwhile second phase, not a prerequisite.</li></ul></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="01-executive-summary.html"><span class="dir">&#8592; Previous</span><span class="ttl">1. Executive summary</span></a>
+<a class="next" href="03-core-concepts.html"><span class="dir">Next &#8594;</span><span class="ttl">3. Core concepts</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#2-1-reading-paths">2.1 Reading paths</a></li>
+<li><a href="#2-2-conventions">2.2 Conventions</a></li>
+<li><a href="#2-3-how-to-adapt-rather-than-copy">2.3 How to adapt rather than copy</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

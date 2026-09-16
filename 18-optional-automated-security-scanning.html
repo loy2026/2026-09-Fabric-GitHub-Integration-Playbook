@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Optional: automated security scanning · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="18 — Optional: automated security scanning">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html" class="here"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part V &middot; Security and governance</div><header class="pagehead"><div class="kicker">Part V &middot; Security and governance</div><h1><span class="secnum">18</span>Optional: automated security scanning</h1></header><article><p class="lead">The manual gates in <a class="xref" href="16-hardening-the-repository-with-rulesets.html">Sections 16</a> and 17 deliver most of the available risk reduction. This section is a worthwhile second phase, not a prerequisite — with one exception, noted below, which is worth enabling on day one.</p>
+<h2 id="18-1-secret-scanning-and-push-protection"><span class="secnum">18.1</span>Secret scanning and push protection<a class="permalink" href="#18-1-secret-scanning-and-push-protection" aria-label="Link to this section">#</a></h2>
+<p>Of everything in this section, this is the one to enable immediately. A Fabric repository contains connection definitions, and the failure mode is a credential committed in a pipeline or notebook definition. Push protection rejects the push before the secret reaches the repository at all, which is qualitatively better than detecting it afterwards — a secret that has been pushed must be treated as compromised and rotated, even after the commit is removed.</p>
+<ul class="lvl0"><li>Enable secret scanning and push protection in <em>Settings → Advanced Security</em>.</li><li>Add the <em>Require secret scanning alerts are resolved</em> rule to the feature branch ruleset so an unresolved alert blocks the merge.</li><li>Agree the response procedure in advance: rotate the credential first, then remove it from history. The order matters.</li></ul>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">Licensing</p><p>Secret scanning and push protection are free for public repositories. For private and internal repositories they require a purchased GitHub Secret Protection licence, which in turn requires a Team or Enterprise plan. If that is not available, the compensating control is a pattern-matching step in the CI checks of <a class="xref" href="#18-4-continuous-integration-checks">Section 18.4</a> — weaker, but not nothing.</p></div></aside>
+<aside class="callout rule"><div class="co-label">Rule</div><div class="co-body"><p class="co-title">A pushed secret is a compromised secret</p><p>Rewriting history does not undo exposure. Rotate the credential, then clean the repository. Never the other way round, and never only the second.</p></div></aside>
+<h2 id="18-2-code-scanning"><span class="secnum">18.2</span>Code scanning<a class="permalink" href="#18-2-code-scanning" aria-label="Link to this section">#</a></h2>
+<p>CodeQL analyses code for vulnerability patterns. Its value in a Fabric repository is narrower than in an application repository, because most of what is committed is JSON definitions rather than executable code. The useful target is the Python in notebooks and Spark job definitions.</p>
+<ul class="lvl0"><li>Enable code scanning and configure CodeQL for Python.</li><li>Add <em>Require code scanning results</em> to the <code>main</code> ruleset, with a severity threshold you are prepared to enforce.</li><li>Expect to tune it. Notebook code triggers patterns that are not meaningful in a data engineering context, and an unusable alert list gets ignored wholesale.</li></ul>
+<h2 id="18-3-dependency-scanning"><span class="secnum">18.3</span>Dependency scanning<a class="permalink" href="#18-3-dependency-scanning" aria-label="Link to this section">#</a></h2>
+<p>Dependabot monitors declared dependencies for known vulnerabilities and opens pull requests to update them. In a Fabric repository the relevant surface is the library specifications in Environment items and any requirements files committed alongside notebooks.</p>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">Environment items are where dependencies actually live</p><p>Fabric Environment items carry library specifications and are Git-supported. That makes them reviewable — a genuine gain, because environment drift is otherwise invisible — but the format may not be one Dependabot understands. Review environment changes manually in the pull request regardless of what automated tooling reports.</p></div></aside>
+<h2 id="18-4-continuous-integration-checks"><span class="secnum">18.4</span>Continuous integration checks<a class="permalink" href="#18-4-continuous-integration-checks" aria-label="Link to this section">#</a></h2>
+<p>Where the team is prepared to invest, automated verification on each pull request is the highest-value addition to this framework. Progression, in order of effort:</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-37"><span class="tabnum">Table 37.</span> CI check progression</figcaption><div class="scroller"><table><colgroup><col style="width:6.9%"><col style="width:70.0%"><col style="width:23.1%"></colgroup><thead><tr><th scope="col">Stage</th><th scope="col">Check</th><th scope="col">Effort</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>1</span></th><td><span><strong>Validate JSON definitions.</strong> Confirm committed item definitions parse. Catches corruption and bad manual edits.</span></td><td><span>Very low</span></td></tr><tr><th scope="row" class="strongcell"><span>2</span></th><td><span><strong>Lint notebook Python.</strong> Run a standard linter over notebook code. Enforces basic consistency and catches obvious errors.</span></td><td><span>Low</span></td></tr><tr><th scope="row" class="strongcell"><span>3</span></th><td><span><strong>Scan for hard-coded environment values.</strong> A pattern match for workspace names, lakehouse references and connection strings. Directly enforces the rule in <a class="xref" href="13-the-data-isolation-problem.html#13-3-the-design-rule">Section 13.3</a> — arguably the highest value-to-effort ratio here.</span></td><td><span>Low</span></td></tr><tr><th scope="row" class="strongcell"><span>4</span></th><td><span><strong>Unit-test notebook functions.</strong> Extract logic into testable functions and run them with a standard test framework.</span></td><td><span>Moderate</span></td></tr><tr><th scope="row" class="strongcell"><span>5</span></th><td><span><strong>Data quality checks against a seeded dataset.</strong> Assert expectations about the output of a transformation.</span></td><td><span>High</span></td></tr><tr><th scope="row" class="strongcell"><span>6</span></th><td><span><strong>Execute pipelines end to end in a branch workspace.</strong> Full integration verification. Requires the data isolation from <a class="xref" href="13-the-data-isolation-problem.html">Section 13</a> to be in place.</span></td><td><span>High</span></td></tr></tbody></table></div></figure>
+<p>Each check&#x27;s job name becomes a status check that the <code>main</code> ruleset can require. Add them to the ruleset as they stabilize — a required check that fails unpredictably teaches the team to bypass the gate, which is worse than not having it.</p>
+<aside class="callout tip"><div class="co-label">Practice</div><div class="co-body"><p class="co-title">Start at stage 3</p><p>Stages 1 and 2 are hygiene. Stage 3 enforces the design rule that everything else in this playbook depends on, and can be implemented as a grep in a few lines of workflow. Do that one first.</p></div></aside></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="17-environments-and-credential-management.html"><span class="dir">&#8592; Previous</span><span class="ttl">17. Environments and credential management</span></a>
+<a class="next" href="19-rollback-and-restore.html"><span class="dir">Next &#8594;</span><span class="ttl">19. Rollback and restore</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#18-1-secret-scanning-and-push-protection">18.1 Secret scanning and push protection</a></li>
+<li><a href="#18-2-code-scanning">18.2 Code scanning</a></li>
+<li><a href="#18-3-dependency-scanning">18.3 Dependency scanning</a></li>
+<li><a href="#18-4-continuous-integration-checks">18.4 Continuous integration checks</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

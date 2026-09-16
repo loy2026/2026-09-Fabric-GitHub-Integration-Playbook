@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Branch workspaces and isolated development · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="12 — Branch workspaces and isolated development">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html" class="here"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part IV &middot; Development workflow</div><header class="pagehead"><div class="kicker">Part IV &middot; Development workflow</div><h1><span class="secnum">12</span>Branch workspaces and isolated development</h1></header><article><p class="lead">A branch workspace is the feature that makes this model practical in Fabric. It gives each unit of work its own live environment, which is the only way to test a change to a pipeline or a notebook without affecting anyone else. It also has one significant gap, which is the subject of the next section.</p>
+<h2 id="12-1-what-branch-out-does"><span class="secnum">12.1</span>What branch-out does<a class="permalink" href="#12-1-what-branch-out-does" aria-label="Link to this section">#</a></h2>
+<p><em>Branch out</em> is a single operation that performs several actions. From the source workspace&#x27;s connected branch, Fabric:</p>
+<ul class="lvl0"><li>Creates a new Git branch from the last commit of the source workspace&#x27;s branch.</li><li>Creates a new workspace, or repoints an existing one, and connects it to that new branch.</li><li>Populates the workspace with the item definitions from the branch — all of them by default.</li><li>Establishes a recorded relationship between the branch workspace and its source workspace.</li></ul>
+<p>The developer is taken to the new workspace, which is then an isolated environment for that unit of work. The relationship is visible in the Fabric interface in three places: the workspace tree shows the source workspace as the parent; breadcrumbs allow navigation back to it; and the <em>Related branches</em> section of the <em>Branches</em> tab in the source control pane lists linked workspaces so they can be reached from the context of the current work rather than hunted for in a workspace list.</p>
+<h2 id="12-2-the-branch-out-procedure"><span class="secnum">12.2</span>The branch-out procedure<a class="permalink" href="#12-2-the-branch-out-procedure" aria-label="Link to this section">#</a></h2>
+<ol class="steps"><li>In the source workspace, open <em>Source control</em> and select <em>Branch out</em>.</li><li>Choose whether to create a new workspace or branch out into an existing one. Enter the new branch and workspace names, or select the existing workspace.</li><li>If a branch workspace admin profile is configured, decide whether to use it (<a class="xref" href="#12-4-branch-workspace-admin-profiles-reconciling-self-servic">Section 12.4</a>).</li><li>Optionally select <em>Select items individually</em> to include only a subset of items — see <a class="xref" href="#12-3-selective-branching">Section 12.3</a>.</li><li>Select <em>Branch out</em>. Fabric validates that your identity can complete the operation before starting, and reports an error rather than beginning an operation that would fail.</li><li>Wait for the sync to complete; it may take a few minutes. Confirm you are in the new workspace and that the expected items are present.</li><li>Establish data isolation before making changes — see <a class="xref" href="13-the-data-isolation-problem.html">Section 13</a>.</li></ol>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title">Branching out to an existing workspace can lose work</p><p>Items in the target workspace that have not been saved to Git may be <strong>deleted</strong>. Commit anything you want to keep before branching out into an existing workspace. Fabric requires you to confirm you understand this before the operation starts — do not dismiss that confirmation reflexively.</p></div></aside>
+<h2 id="12-3-selective-branching"><span class="secnum">12.3</span>Selective branching<a class="permalink" href="#12-3-selective-branching" aria-label="Link to this section">#</a></h2>
+<p>By default a branch-out includes every item from the source branch. <em>Select items individually</em> limits the branch workspace to a chosen subset, which reduces the sync time and the capacity footprint — useful in a large workspace where a change touches three items out of two hundred.</p>
+<ul class="lvl0"><li>All of a selected item&#x27;s dependencies are required. The <em>select related items</em> control resolves them for you.</li><li>Selection can begin while Fabric is still calculating dependencies in the background, but proceeding before they have all loaded may cause the operation to fail. Wait.</li><li>A workspace created this way is identifiable by a <em>selective branch</em> indicator in the status bar.</li><li>Items can be added later: <em>Source control → branch out symbol → Select additional items</em>, choose from the items not previously selected, <em>Add</em>, then <em>Update all</em>.</li><li>Performing a <em>switch branch</em> in a selectively branched workspace <strong>resets the selection</strong> and synchronizes every item from the new branch.</li></ul>
+<h2 id="12-4-branch-workspace-admin-profiles-reconciling-self-servic"><span class="secnum">12.4</span>Branch workspace admin profiles: reconciling self-service with centralized control<a class="permalink" href="#12-4-branch-workspace-admin-profiles-reconciling-self-servic" aria-label="Link to this section">#</a></h2>
+<p>The tension described in <a class="xref" href="04-prerequisites-and-tenant-configuration.html#4-5-organizational-coordination">Section 4.5</a> — branch-out needs workspace creation rights, and many organizations grant those only to a central team — has a direct answer in the platform. A <strong>branch workspace admin profile</strong> is configured by a workspace administrator on a Git-connected workspace. It presets a consented identity and a set of settings that Fabric then uses to create branch workspaces on that administrator&#x27;s behalf.</p>
+<p>When a developer branches out using the profile, Fabric performs the following as the administrator:</p>
+<ul class="lvl0"><li>Creates the workspace.</li><li>Assigns it to a capacity.</li><li>Connects it to the Git repository.</li><li>Adds members to the new workspace with the role the profile specifies.</li></ul>
+<p>The developer needs no workspace-creation right of their own. The administration team keeps control of capacity assignment, membership and the security boundary, and the self-service branch-out experience is preserved. For most organizations this is the single most valuable capability in this section.</p>
+<h2 id="12-5-configuring-a-branch-workspace-admin-profile"><span class="secnum">12.5</span>Configuring a branch workspace admin profile<a class="permalink" href="#12-5-configuring-a-branch-workspace-admin-profile" aria-label="Link to this section">#</a></h2>
+<ol class="steps"><li>Open the workspace you want to enable, then <em>Workspace settings</em>.</li><li>Select <em>Git integration</em>, then the <em>Branch workspaces</em> tab.</li><li>Turn <em>Allow branch workspace admin profile</em> <strong>On</strong>.</li><li>Under <em>Role assignment</em>, choose the role each developer receives on the branch workspaces they create.</li><li>Under <em>Admins</em>, add the users or security groups to be made administrators of every branch workspace created with the profile. If the role assignment is Contributor or Member, at least one valid admin is required; Fabric blocks a branch-out that would create a workspace with no administrator.</li><li>Under <em>Capacity</em>, choose <em>Current active capacity</em> to inherit the source workspace&#x27;s capacity at branch-out time, or select another eligible capacity.</li><li>Set <em>Allow users with at least Contributor role to change Git branch</em> — labelled <em>Allow users with Contributor access or higher to change the Git branch</em> on this tab. The value chosen becomes the default for every branch workspace created with the profile.</li><li>Select <em>Confirm</em>. Fabric validates the configuration and creates the profile only if every check passes.</li></ol>
+<p>Validation confirms that you are a workspace admin; the workspace is connected to Git; you are signed in to your Git account and have access to the repository; you can create workspaces; you can assign the selected capacity and it is active; the capacity and the repository are in the same geographic region, or the tenant setting blocking cross-region operations is off (this check applies where the provider enforces it — see <a class="xref" href="04-prerequisites-and-tenant-configuration.html#4-2-fabric-tenant-settings">Section 4.2</a>); and every identity in the <em>Admins</em> list is a valid tenant member.</p>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title">The profile runs as a specific person</p><p>The workspace admin who <strong>last saved</strong> the profile becomes its <em>consented identity</em>. Every branch-out using the profile then runs under that person&#x27;s identity. If a different admin edits and saves the profile, they become the consented identity instead.</p><p class="co-gap"></p><p>A profile can also become invalid after it is created — a revoked permission, a deactivated capacity, or the consented admin leaving the tenant will all break it, and branch-out stops working until an administrator resolves the issue. <strong>Do not let the consented identity be a person who may leave.</strong> Assign it deliberately, review it as part of joiner-leaver process, and document who it is.</p></div></aside>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">Limitations</p><p>Branch workspace admin profiles were in preview at the time of writing, and a profile cannot be configured on a branch workspace — only on a source workspace.</p></div></aside>
+<h2 id="12-6-switching-branches-and-checking-out-a-new-branch"><span class="secnum">12.6</span>Switching branches and checking out a new branch<a class="permalink" href="#12-6-switching-branches-and-checking-out-a-new-branch" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-23"><span class="tabnum">Table 23.</span> Branch operations and their effect on workspace content</figcaption><div class="scroller"><table><colgroup><col style="width:21.5%"><col style="width:56.9%"><col style="width:21.5%"></colgroup><thead><tr><th scope="col">Operation</th><th scope="col">Effect on workspace content</th><th scope="col">Role required</th></tr></thead><tbody><tr><td><span><strong>Branch out</strong></span></td><td><span>Creates a new branch and a new or repointed workspace, populated from the branch. The source workspace is untouched.</span></td><td><span>Admin, Member or Contributor</span></td></tr><tr><td><span><strong>Checkout new branch</strong></span></td><td><span>Creates a branch from the last synced commit and repoints the current workspace&#x27;s connection at it. <strong>Workspace content is not changed.</strong> This is the safe way to preserve work when the connected branch is protected.</span></td><td><span>Workspace admin (or Contributor/Member with the branch-change setting enabled)</span></td></tr><tr><td><span><strong>Switch branch</strong></span></td><td><span>Re-syncs the workspace to another branch and <strong>overrides every item</strong>. Items present in the old branch but not the new one are <strong>deleted</strong>. Cannot be performed with uncommitted changes outstanding.</span></td><td><span>Workspace admin (or Contributor/Member with the branch-change setting enabled)</span></td></tr></tbody></table></div></figure>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title"><em>Switch branch</em> is the destructive one</p><p>Fabric requires you to confirm that you understand workspace items may be deleted and cannot be restored. The target branch must contain the same directory as the current branch. Switching does not affect the relationship between a branch workspace and its source workspace — it is a Git state change only.</p></div></aside>
+<h2 id="12-7-branch-out-limitations"><span class="secnum">12.7</span>Branch-out limitations<a class="permalink" href="#12-7-branch-out-limitations" aria-label="Link to this section">#</a></h2>
+<ul class="lvl0"><li>Requires available capacity at the moment the operation runs.</li><li>All workspace and branch naming limitations apply (<a class="xref" href="06-repository-and-workspace-topology.html#6-4-structural-limits-that-constrain-the-design">Section 6.4</a>).</li><li>Only Git-supported item types appear in the new workspace.</li><li>The <em>Related branches</em> list shows only branches and workspaces you have permission to view.</li><li>Branch-out creates a Git branch, yet its documented minimum Git permission is Read plus branch creation, whereas creating a branch from within Fabric by any other route requires Write. If a branch-out fails on permissions, grant Write and retest rather than assuming the documented minimum.</li><li>Settings from the original branch are <strong>not</strong> copied to the new branch. Adjust rulesets or definitions so the new branch still meets organizational policy — see <a class="xref" href="16-hardening-the-repository-with-rulesets.html#16-6-a-feature-branch-ruleset">Section 16.6</a>.</li><li>Disconnecting a branch workspace from Git removes its relationship to the source workspace. Disconnecting a source workspace removes every branch workspace relationship it has.</li><li>Deleting a source workspace removes the relationships and leaves its branch workspaces as ordinary workspaces.</li><li>When branching out to an existing workspace: the target must support a Git connection, must have capacity, must not contain template apps, must not already have related branch workspaces, and you must be an admin of it (or a Contributor/Member with the branch-change setting enabled).</li></ul>
+<aside class="callout tip"><div class="co-label">Practice</div><div class="co-body"><p class="co-title">Automating branch-out</p><p>If you build an automation flow that reproduces what branch-out does, use the <em>Create Workspace Relation</em> API (preview) to establish the branch workspace relationship. Call it after the flow has created the workspace, created the Git branch and configured the connection — otherwise the workspace works but the relationship, and the navigation that depends on it, is missing.</p></div></aside></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="11-the-branching-model.html"><span class="dir">&#8592; Previous</span><span class="ttl">11. The branching model</span></a>
+<a class="next" href="13-the-data-isolation-problem.html"><span class="dir">Next &#8594;</span><span class="ttl">13. The data isolation problem</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#12-1-what-branch-out-does">12.1 What branch-out does</a></li>
+<li><a href="#12-2-the-branch-out-procedure">12.2 The branch-out procedure</a></li>
+<li><a href="#12-3-selective-branching">12.3 Selective branching</a></li>
+<li><a href="#12-4-branch-workspace-admin-profiles-reconciling-self-servic">12.4 Branch workspace admin profiles: reconciling self-service with centralized control</a></li>
+<li><a href="#12-5-configuring-a-branch-workspace-admin-profile">12.5 Configuring a branch workspace admin profile</a></li>
+<li><a href="#12-6-switching-branches-and-checking-out-a-new-branch">12.6 Switching branches and checking out a new branch</a></li>
+<li><a href="#12-7-branch-out-limitations">12.7 Branch-out limitations</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

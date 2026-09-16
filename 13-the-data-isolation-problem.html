@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The data isolation problem · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="13 — The data isolation problem">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html" class="here"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part IV &middot; Development workflow</div><header class="pagehead"><div class="kicker">Part IV &middot; Development workflow</div><h1><span class="secnum">13</span>The data isolation problem</h1></header><article><p class="lead">This is the most important section in the playbook after <a class="xref" href="07-connecting-a-workspace-safely.html">Section 7</a>. A branch workspace isolates code. It does not isolate data. Teams that do not address this get the appearance of isolation with none of the substance, and discover the difference when someone truncates a shared table.</p>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title">Data is not copied to a branch workspace</p><p>Branch-out copies item definitions. A notebook in the new workspace that references a lakehouse will, by default, still connect to the lakehouse <strong>in the workspace it was branched from</strong>. The same is true of pipelines, dataflows and shortcuts.</p></div></aside>
+<p><a class="xref" href="#figure-7">Figure 7</a> contrasts the default behaviour with the same two developers once a Variable Library is in place.</p>
+<figure class="diagram" id="figure-7"><button class="zoom" type="button" data-src="diagrams/d9_data_isolation.svg" data-cap="Figure 7" title="Expand"><img src="diagrams/d9_data_isolation.svg" alt="Figure 7. Left: the default. Two developers in separate branch workspaces, writing to the same physical data. Right: the same two developers with a Variable Library selecting a different data source per value set." loading="lazy"></button><figcaption><span class="fignum">Figure 7.</span> Left: the default. Two developers in separate branch workspaces, writing to the same physical data. Right: the same two developers with a Variable Library selecting a different data source per value set.</figcaption></figure>
+<h2 id="13-1-the-two-consequences"><span class="secnum">13.1</span>The two consequences<a class="permalink" href="#13-1-the-two-consequences" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="2"><figcaption id="table-24"><span class="tabnum">Table 24.</span> Consequences of the data isolation gap</figcaption><div class="scroller"><table><colgroup><col style="width:23.1%"><col style="width:76.9%"></colgroup><thead><tr><th scope="col">Consequence</th><th scope="col">What it looks like in practice</th></tr></thead><tbody><tr><td><span><strong>No real isolation</strong></span></td><td><span>A developer testing a transformation reads from, and writes to, the shared Development lakehouse. A <code>TRUNCATE</code> or an incorrect merge corrupts data that another developer is depending on. The branch workspace provided no protection at all, while advertising that it did.</span></td></tr><tr><td><span><strong>Unreliable tests</strong></span></td><td><span>A test in a branch workspace depends on the state of data in a different workspace. It passes because someone else happened to have loaded the right rows, or fails for reasons unconnected to the change under test. Neither outcome tells you anything, and the team learns to distrust the tests.</span></td></tr></tbody></table></div></figure>
+<h2 id="13-2-option-one-parameterization-through-a-variable-library"><span class="secnum">13.2</span>Option one: parameterization through a Variable Library<a class="permalink" href="#13-2-option-one-parameterization-through-a-variable-library" aria-label="Link to this section">#</a></h2>
+<p>This is the recommended approach and, since the Variable Library became available, the straightforward one. Design every item to be environment-aware: no hard-coded workspace names, lakehouse references, connection strings or database names. Each environment-specific value is a variable in a Variable Library, and each workspace has an active value set that supplies its own values.</p>
+<p>Structure:</p>
+<ul class="lvl0"><li>A <strong>Variable Library</strong> item lives in the workspace and holds named variables.</li><li>Variables may be basic types — string, integer, boolean — or complex types such as an <strong>item reference</strong>, which points at a specific lakehouse or warehouse.</li><li>Each variable has one value per <strong>value set</strong>. A value set corresponds to a stage (<code>dev</code>, <code>test</code>, <code>prod</code>) or to an individual developer&#x27;s sandbox.</li><li>Exactly one value set is active in a workspace at a time, and it determines the values used at runtime.</li><li>Items resolve values from the active set in their own context — resolution is not tied to deployment.</li></ul>
+<p>Items that can consume a Variable Library include data pipelines, lakehouse shortcuts, notebooks (through <code>NotebookUtils</code> and the <code>%%configure</code> magic command), Dataflow Gen2, Copy Job, user data functions and Plan items.</p>
+<p>The second benefit is centralization. If several lakehouses in a workspace use shortcuts to the same source, that source becomes one variable. Changing it is one edit rather than one edit per lakehouse.</p>
+<figure class="tablewrap" data-cols="2"><figcaption id="table-25"><span class="tabnum">Table 25.</span> Variable Library constraints</figcaption><div class="scroller"><table><colgroup><col style="width:35.4%"><col style="width:64.6%"></colgroup><thead><tr><th scope="col">Constraint</th><th scope="col">Value</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Variables per library</span></th><td><span>Up to 1,000</span></td></tr><tr><th scope="row" class="strongcell"><span>Value sets per library</span></th><td><span>Up to 1,000</span></td></tr><tr><th scope="row" class="strongcell"><span>Combined cells in alternative value sets</span></th><td><span>Fewer than 10,000</span></td></tr><tr><th scope="row" class="strongcell"><span>Item size</span></th><td><span>Must not exceed 1 MB</span></td></tr><tr><th scope="row" class="strongcell"><span>Note and description fields</span></th><td><span>Up to 2,048 characters</span></td></tr><tr><th scope="row" class="strongcell"><span>Value set ordering</span></th><td><span>Value sets appear in the order added and cannot be reordered in the interface. Edit the JSON directly to change the order.</span></td></tr><tr><th scope="row" class="strongcell"><span>Naming</span></th><td><span>Must not be empty, must not have leading or trailing spaces, must start with a letter, may contain letters, numbers, underscores, hyphens and spaces, and must not exceed 256 characters. Names are not case sensitive.</span></td></tr><tr><th scope="row" class="strongcell"><span>Uniqueness</span></th><td><span>Value set names must be unique within a library; variable names must be unique within a library. The same variable name may exist in two different libraries in one workspace.</span></td></tr><tr><th scope="row" class="strongcell"><span>Active value set</span></th><td><span>Always exactly one. An active value set cannot be deleted — activate another first. Each deployment pipeline stage can have a different active set.</span></td></tr></tbody></table></div></figure>
+<h2 id="13-3-the-design-rule"><span class="secnum">13.3</span>The design rule<a class="permalink" href="#13-3-the-design-rule" aria-label="Link to this section">#</a></h2>
+<aside class="callout rule"><div class="co-label">Rule</div><div class="co-body"><p class="co-title">The design rule this all reduces to</p><p>No Fabric item may contain a hard-coded workspace name, lakehouse or warehouse reference, connection string or database name. Every environment-specific value belongs in a Variable Library and is selected by the active value set.</p><p class="co-gap"></p><p>This one rule is what makes branch workspaces, deployment pipelines and deployment rules all behave as intended. Its absence is the most common reason a Fabric CI/CD implementation never stabilizes.</p></div></aside>
+<h2 id="13-4-option-two-automated-data-seeding"><span class="secnum">13.4</span>Option two: automated data seeding<a class="permalink" href="#13-4-option-two-automated-data-seeding" aria-label="Link to this section">#</a></h2>
+<p>Parameterization tells an item where to look. Seeding puts something there to find. A job triggered when a feature branch or branch workspace is created provisions a lightweight, isolated dataset for it.</p>
+<ul class="lvl0"><li>Seed a <strong>small, representative, anonymized</strong> subset. The goal is a test that exercises the logic, not a copy of production.</li><li>Make it fast. A seeding process that takes an hour will be bypassed, and a bypassed control is worse than no control because it creates a false expectation.</li><li>Tear it down with the branch workspace, so cost tracks active development.</li><li>Treat anonymization as a requirement, not a nicety — a development workspace typically has a wider access list than production.</li></ul>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">Seeding complements parameterization; it does not replace it</p><p>A seeded dataset is only reachable if the items know to look at it, which requires the parameterization from Option 1. Implement the Variable Library first; add seeding when the team needs realistic data volumes.</p></div></aside>
+<h2 id="13-5-choosing-an-approach"><span class="secnum">13.5</span>Choosing an approach<a class="permalink" href="#13-5-choosing-an-approach" aria-label="Link to this section">#</a></h2>
+<figure class="tablewrap" data-cols="4"><figcaption id="table-26"><span class="tabnum">Table 26.</span> Data isolation approaches compared</figcaption><div class="scroller"><table><colgroup><col style="width:23.1%"><col style="width:29.2%"><col style="width:21.5%"><col style="width:26.2%"></colgroup><thead><tr><th scope="col">Approach</th><th scope="col">Isolation achieved</th><th scope="col">Effort</th><th scope="col">When it is the right choice</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Do nothing</span></th><td><span>None. Shared data, shared risk.</span></td><td><span>None</span></td><td><span>Never, once more than one person is developing. Acceptable only for a single developer on a single workspace with no shared data.</span></td></tr><tr><th scope="row" class="strongcell"><span>Variable Library only</span></th><td><span>Items point at per-developer or per-stage sources. Isolation is as good as the separation of those sources.</span></td><td><span>Low to moderate — mostly a matter of removing hard-coded values</span></td><td><span>The default. Start here.</span></td></tr><tr><th scope="row" class="strongcell"><span>Variable Library + manual seeding</span></th><td><span>Full, with realistic data where a developer needs it.</span></td><td><span>Moderate</span></td><td><span>Small teams, or where only some work needs realistic volumes.</span></td></tr><tr><th scope="row" class="strongcell"><span>Variable Library + automated seeding</span></th><td><span>Full and repeatable, provisioned without human involvement.</span></td><td><span>High initially, low thereafter</span></td><td><span>Larger teams, frequent branch-out, or where test reliability matters enough to invest in it.</span></td></tr></tbody></table></div></figure>
+<aside class="callout local"><div class="co-label">Localize</div><div class="co-body"><p class="co-title">This decision cannot be deferred</p><p>Record which approach you are adopting, which sources each value set points at, and who owns the seeding process if there is one. A branch workspace handed to a developer without this settled is a hazard presented as a sandbox.</p></div></aside></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="12-branch-workspaces-and-isolated-development.html"><span class="dir">&#8592; Previous</span><span class="ttl">12. Branch workspaces and isolated development</span></a>
+<a class="next" href="14-the-pull-request-process.html"><span class="dir">Next &#8594;</span><span class="ttl">14. The pull request process</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#13-1-the-two-consequences">13.1 The two consequences</a></li>
+<li><a href="#13-2-option-one-parameterization-through-a-variable-library">13.2 Option one: parameterization through a Variable Library</a></li>
+<li><a href="#13-3-the-design-rule">13.3 The design rule</a></li>
+<li><a href="#13-4-option-two-automated-data-seeding">13.4 Option two: automated data seeding</a></li>
+<li><a href="#13-5-choosing-an-approach">13.5 Choosing an approach</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

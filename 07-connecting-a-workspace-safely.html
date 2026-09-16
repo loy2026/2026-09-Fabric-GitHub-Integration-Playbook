@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connecting a workspace safely · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="7 — Connecting a workspace safely">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html" class="here"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part II &middot; Establishing the integration</div><header class="pagehead"><div class="kicker">Part II &middot; Establishing the integration</div><h1><span class="secnum">7</span>Connecting a workspace safely</h1></header><article><p class="lead">This is the section to read before touching source-control settings. Connecting a workspace to a repository is a single dialog with a destructive failure mode, and the destruction is silent, immediate and not reversible. Everything that follows is a procedure designed around that one fact.</p>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title">What actually happens when you connect</p><p>When a workspace is connected to a branch and folder, Fabric immediately makes the two match. If you then run <em>Update workspace from Git</em> while that folder is empty or near-empty, Fabric resolves the workspace to match — and removes items. A Git branch can always be restored to an earlier commit. <strong>A workspace cannot.</strong></p></div></aside>
+<p><a class="xref" href="#figure-4">Figure 4</a> sets out the decision and both of its outcomes. The procedure in <a class="xref" href="#7-3-the-connection-procedure">Section 7.3</a> exists to guarantee you take the left-hand path.</p>
+<figure class="diagram" id="figure-4"><button class="zoom" type="button" data-src="diagrams/d4_first_sync_decision.svg" data-cap="Figure 4" title="Expand"><img src="diagrams/d4_first_sync_decision.svg" alt="Figure 4. The first-sync decision. The left path is safe and is the one this procedure is designed to guarantee you take. The right path is where workspaces are lost." loading="lazy"></button><figcaption><span class="fignum">Figure 4.</span> The first-sync decision. The left path is safe and is the one this procedure is designed to guarantee you take. The right path is where workspaces are lost.</figcaption></figure>
+<h2 id="7-1-why-the-failure-mode-exists"><span class="secnum">7.1</span>Why the failure mode exists<a class="permalink" href="#7-1-why-the-failure-mode-exists" aria-label="Link to this section">#</a></h2>
+<p>The rule Fabric applies to the first synchronization is reasonable in isolation: if one side is empty and the other has content, copy from the non-empty side to the empty one. If both sides have content, ask the user which direction to take.</p>
+<p>The problem is what counts as content. A repository prepared in advance — with a <code>README.md</code>, a <code>.gitignore</code>, or placeholder layer folders created helpfully by whoever set it up — is not empty. The first sync therefore presents a choice, and one of the two options is <em>Update workspace with Git content</em>, which overwrites the workspace with a folder containing almost nothing. The dialog does warn, and asks for confirmation. It is nonetheless chosen, under time pressure, by people who reasonably assume that a fresh repository is empty.</p>
+<aside class="callout rule"><div class="co-label">Rule</div><div class="co-body"><p class="co-title">Do not pre-create folders in the repository</p><p>Fabric creates the folder structure during synchronization. An &#x27;empty&#x27; folder in GitHub containing only a <code>README.md</code> or a <code>.gitkeep</code> will not behave as empty. Create the repository, leave it alone, and let the first commit from the workspace populate it.</p></div></aside>
+<h2 id="7-2-preflight-clone-the-workspace-as-a-rollback-target"><span class="secnum">7.2</span>Preflight: clone the workspace as a rollback target<a class="permalink" href="#7-2-preflight-clone-the-workspace-as-a-rollback-target" aria-label="Link to this section">#</a></h2>
+<p>Because a workspace cannot be restored to a previous state, the only meaningful safety net is a second workspace holding a verified copy. A deployment pipeline stage is the most convenient way to produce one.</p>
+<ol class="steps"><li>Create or identify a spare target workspace to act as the clone.</li><li>Use a deployment pipeline to deploy from the source workspace to that target. Fabric copies item definitions into the target.</li><li>Re-hydrate the data. This step is not optional and is the one most often skipped — see the caution below.</li><li>Run the clone. Execute the pipelines, refresh the models, open the reports. An unverified backup is not a backup.</li><li>Record what the clone is for and when it may be deleted, so it is not mistaken for a live environment.</li></ol>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title">A pipeline clone does not copy data</p><p>For a lakehouse, Fabric creates a <strong>new, empty</strong> lakehouse in the target: no files, no tables. The SQL analytics endpoint and semantic model objects are provisioned, and notebooks and Spark job definitions are re-bound to the new lakehouse item. Shortcut <em>definitions</em> are synchronized; shortcut <em>contents</em> are not. Warehouse objects are created from the schema project, without row data.</p><p class="co-gap"></p><p>A clone is therefore a functional shell until you load data into it. Treat re-hydration and verification as part of the preflight, not as a follow-up task.</p></div></aside>
+<h2 id="7-3-the-connection-procedure"><span class="secnum">7.3</span>The connection procedure<a class="permalink" href="#7-3-the-connection-procedure" aria-label="Link to this section">#</a></h2>
+<p>Perform these steps once per workspace. The workspace administrator performing them should have the repository open in a second window to confirm the folder state before proceeding.</p>
+<ol class="steps"><li>Confirm the preflight clone exists, has data, and runs.</li><li>In GitHub, confirm the target branch exists and that the folder name you intend to use <strong>does not exist yet</strong>. You will type the folder name during connection; Fabric creates it.</li><li>In the Fabric workspace, open <em>Workspace settings</em>.</li><li>Select the <em>Git integration</em> tab.</li><li>Choose <strong>GitHub</strong> as the provider. Sign in and authorize the connection when prompted, supplying the fine-grained personal access token created in <a class="xref" href="05-authentication-and-identity.html#5-2-tier-1-creating-a-fine-grained-personal-access-token">Section 5.2</a>.</li><li>Enter the connection details: the GitHub organization, the repository, the branch (<code>main</code> for a layer&#x27;s Development workspace), and the folder name (the layer code, for example <code>BRZ</code>).</li><li>Read the summary in the dialog before confirming. It states which direction the first sync will take. If it offers a choice of direction, <strong>stop</strong> — the folder is not empty. Cancel, resolve the folder state, and start again.</li><li>Select <em>Connect and sync</em>. With an empty folder and a populated workspace, Fabric copies workspace → Git and deletes nothing.</li><li>Immediately open <em>Source control</em>, select all items under <em>Changes</em>, add a commit message such as <code>baseline: initial workspace export</code>, and <strong>Commit</strong>.</li><li>Verify in GitHub that the folder now contains the expected structure and that the commit is present on the branch.</li><li>Repeat for each layer workspace, using the same branch and a different folder.</li></ol>
+<aside class="callout rule"><div class="co-label">Rule</div><div class="co-body"><p class="co-title">Commit the baseline before doing anything else</p><p>Until a baseline commit exists on the branch, the workspace has no recoverable copy in Git and the whole exercise has added risk without adding protection. The baseline commit is the point at which the integration starts being useful.</p></div></aside>
+<h2 id="7-4-the-folder-synchronization-pitfall"><span class="secnum">7.4</span>The folder synchronization pitfall<a class="permalink" href="#7-4-the-folder-synchronization-pitfall" aria-label="Link to this section">#</a></h2>
+<p>This is a second, subtler version of the same failure, and it occurs long after the initial connection.</p>
+<p>Because folder structure is part of what Fabric compares, creating a folder in the workspace that does not exist in the connected branch puts the two sides out of step. The source control pane reports <em>uncommitted changes</em>. If, at that point, someone runs <em>Update from Git</em> instead of committing, the branch&#x27;s structure — which lacks the new folders — overwrites the workspace&#x27;s structure, deleting the new folders and their contents.</p>
+<aside class="callout caution"><div class="co-label">Caution</div><div class="co-body"><p class="co-title">Structural changes must be committed before any update</p><p>After creating or reorganizing folders in a workspace, commit that change before pulling anything. Do not run <em>Update from Git</em> with an uncommitted structural change outstanding.</p></div></aside>
+<p>Where the connected branch is protected and cannot be committed to directly — which, if <a class="xref" href="16-hardening-the-repository-with-rulesets.html">Section 16</a> has been implemented, it will be — use the <em>Checkout new branch</em> option:</p>
+<ol class="steps"><li>In the source control pane, choose <em>Checkout new branch</em>. This creates a branch from the last synced commit and repoints the workspace&#x27;s connection at it, without changing workspace content — so the uncommitted folder change is retained and ready to commit.</li><li>Commit the folder changes to that new branch.</li><li>Open a pull request and merge the change into the original branch through the normal review process.</li><li>Switch the workspace back to the original branch, or update it, once the merge has landed.</li></ol>
+<h2 id="7-5-recovery-if-a-workspace-has-already-been-emptied"><span class="secnum">7.5</span>Recovery, if a workspace has already been emptied<a class="permalink" href="#7-5-recovery-if-a-workspace-has-already-been-emptied" aria-label="Link to this section">#</a></h2>
+<p>If the destructive path has already been taken, the options are limited and depend entirely on what exists outside the workspace.</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-14"><span class="tabnum">Table 14.</span> Recovery options after an unintended overwrite</figcaption><div class="scroller"><table><colgroup><col style="width:26.2%"><col style="width:50.8%"><col style="width:23.1%"></colgroup><thead><tr><th scope="col">What exists</th><th scope="col">Recovery path</th><th scope="col">Completeness</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>A verified preflight clone</span></th><td><span>Deploy from the clone back into the workspace with a deployment pipeline, then re-establish the Git connection following this procedure.</span></td><td><span>Item definitions restored in full. Data restored only to the state the clone held.</span></td></tr><tr><th scope="row" class="strongcell"><span>A baseline commit on any branch</span></th><td><span>Point the workspace at that branch and folder and update from Git.</span></td><td><span>Item definitions restored to the commit. No data.</span></td></tr><tr><th scope="row" class="strongcell"><span>Items in the workspace recycle bin</span></th><td><span>Restore the individual items. Note the recycle bin interaction noted below — restoring from the recycle bin preserves the original item ID, whereas Git recreates items with new IDs, so duplicates can result.</span></td><td><span>Partial and time-limited. Item IDs preserved, which helps dependencies.</span></td></tr><tr><th scope="row" class="strongcell"><span>Nothing</span></th><td><span>The definitions must be rebuilt. This is the outcome the preflight exists to prevent.</span></td><td><span>None.</span></td></tr></tbody></table></div></figure>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">Recycle bin and Git integration interact badly</p><p>Git operations such as <em>Undo</em> or <em>Update from Git</em> re-create a deleted item with a <strong>new</strong> item ID, whereas restoring from the recycle bin preserves the <strong>original</strong> ID. Doing both produces two items with different identities, which can stop Git integration working and break existing dependencies. The mitigation is to delete the item that Git re-created. Note also that Git restores definitions only — a recycle bin restore returns both the definition and the data.</p></div></aside>
+<h2 id="7-6-the-connection-runbook-in-brief"><span class="secnum">7.6</span>The connection runbook, in brief<a class="permalink" href="#7-6-the-connection-runbook-in-brief" aria-label="Link to this section">#</a></h2>
+<p><a class="xref" href="appendix-c.html">Appendix C</a> contains this as a checklist suitable for printing or pasting into a ticket.</p>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-15"><span class="tabnum">Table 15.</span> Connection runbook summary</figcaption><div class="scroller"><table><colgroup><col style="width:16.9%"><col style="width:50.8%"><col style="width:32.3%"></colgroup><thead><tr><th scope="col">Phase</th><th scope="col">Action</th><th scope="col">Gate before proceeding</th></tr></thead><tbody><tr><th scope="row" class="strongcell"><span>Preflight</span></th><td><span>Clone the workspace, re-hydrate data, verify it runs.</span></td><td><span>Clone executes end to end.</span></td></tr><tr><th scope="row" class="strongcell"><span>Preflight</span></th><td><span>Confirm the target Git folder does not exist.</span></td><td><span>Repository browsed and confirmed by a second person.</span></td></tr><tr><th scope="row" class="strongcell"><span>Connect</span></th><td><span>Connect and sync with the folder name typed in.</span></td><td><span>The dialog does not offer a direction choice.</span></td></tr><tr><th scope="row" class="strongcell"><span>Baseline</span></th><td><span>Commit all items to the branch.</span></td><td><span>Commit visible in GitHub; structure matches the workspace.</span></td></tr><tr><th scope="row" class="strongcell"><span>Harden</span></th><td><span>Apply the <code>main</code> ruleset from <a class="xref" href="16-hardening-the-repository-with-rulesets.html">Section 16</a>.</span></td><td><span>Direct push to <code>main</code> is refused.</span></td></tr><tr><th scope="row" class="strongcell"><span>Operate</span></th><td><span>Commit from branch workspaces; update Development workspaces only when incoming changes exist.</span></td><td><span>—</span></td></tr><tr><th scope="row" class="strongcell"><span>Retire</span></th><td><span>Delete the preflight clone once the integration is stable.</span></td><td><span>Baseline commit and at least one successful round trip.</span></td></tr></tbody></table></div></figure></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="06-repository-and-workspace-topology.html"><span class="dir">&#8592; Previous</span><span class="ttl">6. Repository and workspace topology</span></a>
+<a class="next" href="08-the-synchronization-model.html"><span class="dir">Next &#8594;</span><span class="ttl">8. The synchronization model</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#7-1-why-the-failure-mode-exists">7.1 Why the failure mode exists</a></li>
+<li><a href="#7-2-preflight-clone-the-workspace-as-a-rollback-target">7.2 Preflight: clone the workspace as a rollback target</a></li>
+<li><a href="#7-3-the-connection-procedure">7.3 The connection procedure</a></li>
+<li><a href="#7-4-the-folder-synchronization-pitfall">7.4 The folder synchronization pitfall</a></li>
+<li><a href="#7-5-recovery-if-a-workspace-has-already-been-emptied">7.5 Recovery, if a workspace has already been emptied</a></li>
+<li><a href="#7-6-the-connection-runbook-in-brief">7.6 The connection runbook, in brief</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

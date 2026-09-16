@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The pull request process · Microsoft Fabric – GitHub Integration Playbook</title>
+<meta name="description" content="14 — The pull request process">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a4d8f'/%3E%3Cpath d='M9 22V10h4.6c2.6 0 4 1.3 4 3.4 0 1.5-.8 2.5-2 2.9 1.5.3 2.5 1.5 2.5 3.1 0 2.2-1.6 3.6-4.3 3.6H9zm2.6-7.1h1.7c1.1 0 1.8-.5 1.8-1.4s-.6-1.4-1.8-1.4h-1.7v2.8zm0 5h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-2v3zM21 22V10h2.6v12H21z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="navToggle" type="button" aria-label="Toggle navigation">&#9776;</button>
+  <a class="brand" href="index.html"><b>Fabric &amp; GitHub</b><span>Integration Playbook</span></a>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <span class="mag">&#9906;</span>
+    <input id="q" type="search" placeholder="Search the playbook&nbsp;&nbsp;/" autocomplete="off"
+           spellcheck="false" aria-label="Search the playbook">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle colour theme">&#9790;</button>
+</header>
+<div class="shell">
+<nav class="sidebar" aria-label="Playbook contents">
+<a class="home" href="index.html">&#8592;&nbsp; Contents &amp; overview</a>
+<div class="partgroup"><div class="partlabel">Front matter</div><ol>
+<li><a href="00-document-control.html"><span class="n">0</span><span>Document control</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part I &middot; Foundations</div><ol>
+<li><a href="01-executive-summary.html"><span class="n">1</span><span>Executive summary</span></a></li>
+<li><a href="02-how-to-use-this-playbook.html"><span class="n">2</span><span>How to use this playbook</span></a></li>
+<li><a href="03-core-concepts.html"><span class="n">3</span><span>Core concepts</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part II &middot; Establishing the integration</div><ol>
+<li><a href="04-prerequisites-and-tenant-configuration.html"><span class="n">4</span><span>Prerequisites and tenant configuration</span></a></li>
+<li><a href="05-authentication-and-identity.html"><span class="n">5</span><span>Authentication and identity</span></a></li>
+<li><a href="06-repository-and-workspace-topology.html"><span class="n">6</span><span>Repository and workspace topology</span></a></li>
+<li><a href="07-connecting-a-workspace-safely.html"><span class="n">7</span><span>Connecting a workspace safely</span></a></li>
+<li><a href="08-the-synchronization-model.html"><span class="n">8</span><span>The synchronization model</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part III &middot; Scope of the integration</div><ol>
+<li><a href="09-supported-items-and-their-representation-in-git.html"><span class="n">9</span><span>Supported items and their representation in Git</span></a></li>
+<li><a href="10-exclusions-sensitivity-labels-and-limits.html"><span class="n">10</span><span>Exclusions, sensitivity labels and limits</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part IV &middot; Development workflow</div><ol>
+<li><a href="11-the-branching-model.html"><span class="n">11</span><span>The branching model</span></a></li>
+<li><a href="12-branch-workspaces-and-isolated-development.html"><span class="n">12</span><span>Branch workspaces and isolated development</span></a></li>
+<li><a href="13-the-data-isolation-problem.html"><span class="n">13</span><span>The data isolation problem</span></a></li>
+<li><a href="14-the-pull-request-process.html" class="here"><span class="n">14</span><span>The pull request process</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part V &middot; Security and governance</div><ol>
+<li><a href="15-access-model-teams-roles-and-identity.html"><span class="n">15</span><span>Access model: teams, roles and identity</span></a></li>
+<li><a href="16-hardening-the-repository-with-rulesets.html"><span class="n">16</span><span>Hardening the repository with rulesets</span></a></li>
+<li><a href="17-environments-and-credential-management.html"><span class="n">17</span><span>Environments and credential management</span></a></li>
+<li><a href="18-optional-automated-security-scanning.html"><span class="n">18</span><span>Optional: automated security scanning</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VI &middot; Operations and adoption</div><ol>
+<li><a href="19-rollback-and-restore.html"><span class="n">19</span><span>Rollback and restore</span></a></li>
+<li><a href="20-auditing-monitoring-and-scaling.html"><span class="n">20</span><span>Auditing, monitoring and scaling</span></a></li>
+<li><a href="21-implementation-roadmap.html"><span class="n">21</span><span>Implementation roadmap</span></a></li>
+<li><a href="22-strategic-recommendations.html"><span class="n">22</span><span>Strategic recommendations</span></a></li>
+<li><a href="23-conclusion.html"><span class="n">23</span><span>Conclusion</span></a></li>
+</ol></div>
+<div class="partgroup"><div class="partlabel">Part VII &middot; Appendices</div><ol>
+<li><a href="appendix-a.html"><span class="n">A</span><span>Placeholder and naming reference</span></a></li>
+<li><a href="appendix-b.html"><span class="n">B</span><span>Consolidated limits reference</span></a></li>
+<li><a href="appendix-c.html"><span class="n">C</span><span>Pre-connection runbook checklist</span></a></li>
+<li><a href="appendix-d.html"><span class="n">D</span><span>Roles and permissions quick reference</span></a></li>
+<li><a href="appendix-e.html"><span class="n">E</span><span>Fine-grained PAT permission reference</span></a></li>
+<li><a href="appendix-f.html"><span class="n">F</span><span>Git command reference</span></a></li>
+<li><a href="appendix-g.html"><span class="n">G</span><span>Adoption decision log</span></a></li>
+<li><a href="appendix-h.html"><span class="n">H</span><span>Troubleshooting</span></a></li>
+<li><a href="appendix-i.html"><span class="n">I</span><span>Figure index and sources</span></a></li>
+</ol></div>
+</nav>
+<main id="top"><div class="crumbs"><a href="index.html">Playbook</a><span>/</span>Part IV &middot; Development workflow</div><header class="pagehead"><div class="kicker">Part IV &middot; Development workflow</div><h1><span class="secnum">14</span>The pull request process</h1></header><article><p class="lead">The pull request is where the quality of this whole model is actually determined. Everything else — branching, rulesets, environments — exists to make sure changes arrive here and cannot go around it.</p>
+<h2 id="14-1-what-a-pull-request-is-for"><span class="secnum">14.1</span>What a pull request is for<a class="permalink" href="#14-1-what-a-pull-request-is-for" aria-label="Link to this section">#</a></h2>
+<p>Three things at once, and it is worth being explicit about all three because teams tend to optimize for the first and neglect the others:</p>
+<ul class="lvl0"><li><strong>A quality gate.</strong> A second person looks at the change before it reaches a deployable trunk.</li><li><strong>A collaboration forum.</strong> Reviewers comment on specific lines, ask questions, and suggest improvements. This is the mechanism by which knowledge moves around a team and by which newer engineers learn the codebase.</li><li><strong>A durable record.</strong> Six months later, the pull request is the answer to “why is this measure calculated this way?” — provided the description said something.</li></ul>
+<h2 id="14-2-opening-a-pull-request"><span class="secnum">14.2</span>Opening a pull request<a class="permalink" href="#14-2-opening-a-pull-request" aria-label="Link to this section">#</a></h2>
+<ol class="steps"><li>Confirm the work is complete and committed to the feature branch, and that unit testing in the branch workspace has passed.</li><li>In the repository, open the <em>Pull requests</em> tab.</li><li>Select <em>New pull request</em>, or use <em>Compare &amp; pull request</em> on the banner that appears after a recent push.</li><li>Set the base branch to <code>main</code> and the compare branch to your feature branch.</li><li>Review the <em>Comparing changes</em> section: check the commits, the files changed, and the additions and deletions. Read your own diff before asking anyone else to.</li><li>Enter a title that describes the change, not the branch.</li><li>Write the description — see the template below.</li><li>Select <em>Create pull request</em>.</li></ol>
+<h2 id="14-3-what-the-description-should-contain"><span class="secnum">14.3</span>What the description should contain<a class="permalink" href="#14-3-what-the-description-should-contain" aria-label="Link to this section">#</a></h2>
+<p>A reviewer arriving at a Fabric pull request is looking at JSON they cannot execute. What they need from the author is context they cannot get from the diff.</p>
+<figure class="codeblock"><div class="codewrap"><button class="copy" type="button" title="Copy">Copy</button><pre><code><span class="cmt">## What changed</span>
+One or two sentences. What this does, in business terms.
+
+<span class="cmt">## Why</span>
+The problem being solved, or the ticket reference.
+
+<span class="cmt">## Items affected</span>
+- Notebook: nb_transform_revenue
+- Semantic model: fin_reporting  (measure added; no schema change)
+- Pipeline: pl_load_bronze_daily  (schedule unchanged)
+
+<span class="cmt">## How it was tested</span>
+Which branch workspace, which value set, what was run, what the result was.
+
+<span class="cmt">## Blast radius</span>
+What breaks if this is wrong. Downstream items, reports, consumers.
+
+<span class="cmt">## Reviewer notes</span>
+Anything that will look odd in the diff — e.g. column reordering in the .bim
+after a rename, or LF/CRLF conversion. Save the reviewer the question.</code></pre></div><figcaption>A pull request description template. Consider committing this as <code>.github/pull_request_template.md</code> so it is pre-filled.</figcaption></figure>
+<h2 id="14-4-reviewing"><span class="secnum">14.4</span>Reviewing<a class="permalink" href="#14-4-reviewing" aria-label="Link to this section">#</a></h2>
+<p>Guidance for reviewers, in rough order of value:</p>
+<ul class="lvl0"><li><strong>Read the description first.</strong> If it does not say what the change is for or how it was tested, ask for that before reviewing the code. This is not pedantry — a reviewer who cannot tell what the change is intended to do cannot tell whether it does it.</li><li><strong>Check the parameterization.</strong> Search the diff for hard-coded workspace names, lakehouse references, connection strings and database names. This is the single most productive thing a reviewer can look for in a Fabric change (<a class="xref" href="13-the-data-isolation-problem.html#13-3-the-design-rule">Section 13.3</a>).</li><li><strong>Check the blast radius claim.</strong> Does the change touch a semantic model that reports depend on? Does a pipeline schedule change? Is a column removed that something downstream reads?</li><li><strong>Ignore known noise.</strong> Column reordering in a <code>.bim</code> after a rename, and LF/CRLF conversion, are artefacts. Do not raise them.</li><li><strong>Comment on lines, not in a summary.</strong> Line comments create a thread that can be resolved; a summary comment listing six issues cannot be tracked.</li><li><strong>Approve, or request changes, explicitly.</strong> A review left in an ambiguous state blocks the author without telling them what to do.</li></ul>
+<p>To approve: open the pull request, select <em>Files changed</em> or the review control, choose <em>Approve</em>, add comments if useful, and <em>Submit review</em>. A reviewer must hold write access or above for the approval to count.</p>
+<aside class="callout note"><div class="co-label">Note</div><div class="co-body"><p class="co-title">What the author will see while a review is required</p><p>With the ruleset from <a class="xref" href="16-hardening-the-repository-with-rulesets.html">Section 16</a> in place, the pull request shows <em>Review required</em> and <em>Merging is blocked</em> until an approving review from a user with write access has been submitted. This is expected and is the control working.</p></div></aside>
+<h2 id="14-5-merging"><span class="secnum">14.5</span>Merging<a class="permalink" href="#14-5-merging" aria-label="Link to this section">#</a></h2>
+<ol class="steps"><li>Confirm the required approvals are present and every required status check has passed.</li><li>Review the commit message and extended description that will be recorded on <code>main</code>.</li><li>Select <em>Merge pull request</em>, then <em>Confirm merge</em>.</li><li>Delete the feature branch when prompted. The branch has served its purpose and leaving it makes the branch list less useful.</li><li>Update the Development workspace from Git — <a class="xref" href="#14-6-returning-the-change-to-the-development-workspace">Section 14.6</a>.</li></ol>
+<figure class="tablewrap" data-cols="3"><figcaption id="table-27"><span class="tabnum">Table 27.</span> Merge strategies</figcaption><div class="scroller"><table><colgroup><col style="width:21.5%"><col style="width:35.4%"><col style="width:43.1%"></colgroup><thead><tr><th scope="col">Strategy</th><th scope="col">Result on <code>main</code></th><th scope="col">Use when</th></tr></thead><tbody><tr><td><span><strong>Squash and merge</strong></span></td><td><span>One commit per pull request. Clean, linear history; individual commits are lost.</span></td><td><span>The default recommendation. A pull request is the unit of change, and one commit per change makes <code>main</code>&#x27;s history readable and reverting simple.</span></td></tr><tr><td><span><strong>Merge commit</strong></span></td><td><span>Every commit from the branch, plus a merge commit.</span></td><td><span>The intermediate commits carry genuine value — a large refactor where the sequence documents the reasoning.</span></td></tr><tr><td><span><strong>Rebase and merge</strong></span></td><td><span>Every commit, replayed onto <code>main</code> with no merge commit.</span></td><td><span>Rarely necessary here. Requires care, and offers little over squashing for analytics work.</span></td></tr></tbody></table></div></figure>
+<aside class="callout tip"><div class="co-label">Practice</div><div class="co-body"><p class="co-title">Enforce one strategy</p><p>A ruleset can require a specific merge method. Choosing one — squash, in most cases — and enforcing it keeps <code>main</code>&#x27;s history uniform, which makes <code>git log</code> and <code>git revert</code> both behave predictably.</p></div></aside>
+<h2 id="14-6-returning-the-change-to-the-development-workspace"><span class="secnum">14.6</span>Returning the change to the Development workspace<a class="permalink" href="#14-6-returning-the-change-to-the-development-workspace" aria-label="Link to this section">#</a></h2>
+<p>A merge to <code>main</code> does not change any workspace. The Development workspaces connected to <code>main</code> must be updated before the change can be promoted.</p>
+<ol class="steps"><li>Open the Development workspace for the affected layer.</li><li>Select <em>Source control</em>. The pending update count reflects the merge.</li><li>Open <em>Updates</em> and review what will change.</li><li>Select <em>Update all</em>, and confirm.</li><li>Verify the update succeeded and that item status has returned to <em>Synced</em>.</li><li>Repeat for each layer workspace affected by the change.</li><li>Hand over to the release path: promote to Test and then Production with the deployment pipeline.</li></ol>
+<aside class="callout rule"><div class="co-label">Rule</div><div class="co-body"><p class="co-title">Update every affected layer before promoting</p><p>A change spanning bronze and silver requires both workspaces to be updated. Promoting one layer without the other produces a partially deployed change, which is harder to diagnose than an obviously failed one.</p></div></aside>
+<h2 id="14-7-housekeeping"><span class="secnum">14.7</span>Housekeeping<a class="permalink" href="#14-7-housekeeping" aria-label="Link to this section">#</a></h2>
+<ul class="lvl0"><li><strong>Delete merged feature branches.</strong> Either manually at merge, or by enabling automatic branch deletion on the repository.</li><li><strong>Delete branch workspaces</strong> when the release they support has shipped. They consume capacity and drift from <code>main</code>.</li><li><strong>Delete preflight clones</strong> once the integration is stable and a baseline commit plus a successful round trip exist.</li><li><strong>Prune stale branches monthly.</strong> A branch whose date marker has passed and which has not merged is either abandoned or blocked; find out which.</li></ul></article><nav class="pager" aria-label="Previous and next section">
+<a class="prev" href="13-the-data-isolation-problem.html"><span class="dir">&#8592; Previous</span><span class="ttl">13. The data isolation problem</span></a>
+<a class="next" href="15-access-model-teams-roles-and-identity.html"><span class="dir">Next &#8594;</span><span class="ttl">15. Access model: teams, roles and identity</span></a>
+</nav></main>
+<aside class="rail" aria-label="On this page"><h6>On this page</h6><ul>
+<li><a href="#14-1-what-a-pull-request-is-for">14.1 What a pull request is for</a></li>
+<li><a href="#14-2-opening-a-pull-request">14.2 Opening a pull request</a></li>
+<li><a href="#14-3-what-the-description-should-contain">14.3 What the description should contain</a></li>
+<li><a href="#14-4-reviewing">14.4 Reviewing</a></li>
+<li><a href="#14-5-merging">14.5 Merging</a></li>
+<li><a href="#14-6-returning-the-change-to-the-development-workspace">14.6 Returning the change to the Development workspace</a></li>
+<li><a href="#14-7-housekeeping">14.7 Housekeeping</a></li>
+</ul></aside>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <button class="lbopen" type="button">Open full size</button>
+    <button class="lbclose" type="button">Close</button>
+  </div>
+  <img alt="">
+  <div class="lbcap"></div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
